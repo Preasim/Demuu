@@ -52,8 +52,15 @@ export const slide1 = () => {
     }
   
     _setCanvasSize() {
-    const canvasWidth = 500; // 변경된 너비
-    const canvasHeight = 500; // 변경된 높이
+    let canvasWidth = 0; // 변경된 너비
+    let canvasHeight = 0; // 변경된 높이
+    if (window.innerWidth <= 576) {
+      canvasWidth = 300;
+      canvasHeight = 300;
+    } else {
+      canvasWidth = 500;
+      canvasHeight = 500;
+    }
     this.canvas.style.width = canvasWidth + "px";
     this.canvas.style.height = canvasHeight + "px";
     this.canvas.width = Math.floor(canvasWidth * this.dpi);

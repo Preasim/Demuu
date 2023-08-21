@@ -1,4 +1,4 @@
-const redirectURL = "http://demuu.dothome.co.kr/main-page/index.html";
+const redirectURL = "http://demuu.dothome.co.kr/m.gallery/gallery.html";
 
 const isMobile = () => {
   try {
@@ -10,7 +10,7 @@ const isMobile = () => {
 };
 
 function redirectOn(){
-  if (!isMobile()) window.location.replace(redirectURL);
+  if (isMobile()) window.location.replace(redirectURL);
 }
 
 redirectOn();
