@@ -1,4 +1,4 @@
-const redirectURL = "http://demuu.dothome.co.kr/m.gallery/gallery.html";
+const redirectURL = "https://preasim.github.io/Demuu/m.gallery/gallery.html";
 
 const isMobile = () => {
   try {
