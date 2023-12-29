@@ -185,7 +185,7 @@ header {
   transform: translate(-50%, -58%);
   color: #f5f5f5;
   text-shadow: 0 0 5px #212121;
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: 2px;
 }
 
@@ -304,7 +304,6 @@ header {
 /* --------------------------- slide 3 uncover --------------------------- */
 .slide-item  .h {
   text-align: center;
-  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/overlay.png");
   overflow: hidden;
   margin: auto;
   width: 500px;

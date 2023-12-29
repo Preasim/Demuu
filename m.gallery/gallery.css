@@ -495,7 +495,7 @@ main {
   transform: translate(-50%, -58%);
   color: #f5f5f5;
   text-shadow: 0 0 5px #212121;
-  font-size: 24px;
+  font-size: 18px;
   letter-spacing: 2px;
 }
 
@@ -717,7 +717,7 @@ main {
     letter-spacing: 2px;
   }
   .slide1 p {
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 8px;
     letter-spacing: 2px;
   }

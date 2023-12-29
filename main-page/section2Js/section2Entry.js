@@ -56,7 +56,7 @@ export const section2Animation = (() => {
 
       setTimeout(async () => {
         const minorPromise = typeText(
-          '"세상을 변화시키는 가장 강력한 힘은 코드이다. 그리고 나는 그 힘을 손에 쥐고 있다."',
+          '"세상을 변화시키는 가장 강력한 힘은 코드이다.',
           minorTitle,
           0 // minorTitle 타이핑 시작 시간 설정 (즉시 시작)
         );

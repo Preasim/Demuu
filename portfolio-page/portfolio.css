@@ -79,7 +79,7 @@ body {
 
 .myName {
   text-align: center;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 800;
   color: #212121;
 }
@@ -89,6 +89,7 @@ body {
   text-align: center;
   line-height: 24px;
   padding-top: 3vh;
+  font-size: 20px;
 }
 
 .introduce-menu {
@@ -141,64 +142,81 @@ body {
 
 /* ----- section3 ----- */
 .my-skills {
-  height: 550px;
+  height: 1580px;
 }
 
-.my-skills h5 {
-  font-size: 20px;
-  font-weight: 600;
-  padding-bottom: 20px;
+.language-chart {
+  text-align: center;
 }
 
-.my-skills p {
-  padding: 0 0 10px 0;
-}
-
-.skill-bx1 {
-  display: flex;
+.language-chart img {
+  width: 860px;
+  height: auto;
   margin-top: 40px;
-  text-align: left;
+  margin-bottom: 40px;
 }
 
-.skill-bx1 div {
-  padding-left: 20%;
-  width: 50%;
+.lc2 {
+  display: none;
 }
 
-.skill-bx2 {
-  display: flex;
-  text-align: left;
-  padding-top: 50px;
+.my-skills h2 {
+  font-size: 1.8em;
+  text-align: center;
+  padding-top: 80px;
 }
 
-.skill-bx2 div {
-  padding-left: 20%;
-  width: 50%;
+.skill-bx {
+  text-align: center;
+}
+
+
+.skill-bx .item {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,.2), 0 3px 6px rgba(0,0,0,.2);
+  display: inline-block;
+  margin: 24px 12px 0 12px;
+  overflow: hidden;
+}
+
+.skill-bx img {
+  position: absolute;
+  width: 80%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* ----- section4 ----- */
 .experience {
   display: flex;
   width: 80%;
-  padding: 50px 0;
-  margin: 0 auto;
+  padding: 50px 0 30px 0;
+  margin: 32px auto 40px auto;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 10px, rgba(0, 0, 0, 0.2) 0px 3px 10px;
+  border-radius: 1rem;
 }
 
 .ex-title-bx {
   display: flex;
   flex-direction: column;
-  width: 54%;
+  width: 50%;
+  border-right: 2px solid rgba(0, 0, 0, .1);
 }
 
 .experience-title {
-  margin-left: 5%;
+  margin-left: 8%;
 }
 
-.experience-title a {
+.experience-title .title {
   font-size: 26px;
   font-weight: 600;
-  color: #616161;
-  text-decoration: underline;
+  display: inline-block;
   transform: rotate(0.02deg);
 }
 
@@ -216,15 +234,14 @@ body {
 
 
 .experience-menu {
-  margin-top: 80px;
-  margin-left: 5%;
+  margin-top: 40px;
+  margin-left: 8%;
 }
 
-.experience-menu a:nth-child(2) {
+.experience-menu .emItem {
   display: flex;
   align-items: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  padding: 10px 0;
 }
 
 .experience-menu a:hover p {
@@ -233,16 +250,40 @@ body {
 
 .experience-menu p {
   display: inline-block;
+  padding-left: 10px;
 }
 
 .experience-menu img {
   width: 20px;
-  padding-right: 5px;
-  margin-left: -2px;
+  height: auto;
+  margin-left: -1px;
+  vertical-align: middle;
+}
+
+.readMe {
+  width: 120px;
+  height: 40px;
+  background-color: #424242;
+  border-radius: 6px;
+  margin-left: 8%;
+  text-align: center;
+  color: #fff;
+  margin-top: 32px;
+  line-height: 38px;
+}
+
+.readMe p {
+  display: inline-block;
+  vertical-align: middle;
+}
+.readMe i {
+  vertical-align: middle;
+  padding-left: 4px;
 }
 
 .experience-content {
-  margin-left: 2%;
+  margin-left: 8%;
+  width: 50%;
 }
 
 .experience-content h5 {
@@ -250,10 +291,15 @@ body {
   font-weight: 600;
   transform: rotate(0.02deg);
   margin-bottom: 25px;
+  padding-top: 10px;
 }
 
 .experience-content p {
   padding: 10px 0;
+}
+
+.readMe-phone {
+  display: none;
 }
 
 /* ----- section5 ----- */
@@ -263,6 +309,11 @@ body {
   margin-top: 40px;
   margin-bottom: 16px;
   text-align: center;
+}
+
+.oex-date {
+  text-align: center;
+  font-size: 16px;
 }
 
 .tabs {
@@ -341,7 +392,7 @@ body {
   top: 0px;
 }
 .tabs .tc2>div>p {
-  padding: 4px 0;
+  padding: 14px 0 0 0;
 }
 
 .codestates-project h5 {
@@ -442,8 +493,8 @@ footer {
 
 .footer-bx {
   margin-top: 8vh;
-  height: 110px;
-  border-top: solid 2px rgba(0, 0, 0, .2)
+  height: 180px;
+  background-color: #222;
 }
 
 .footer-contact {
@@ -452,18 +503,23 @@ footer {
   font-weight: 700;
 }
 
+.footer-item {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin: 0 12px;
+}
+
 .footer-blog {
   padding-right: 1%;
 }
 
-.footer-blog img {
-  width: 1.6vw;
-  vertical-align: middle;
-}
 
-.footer-github i {
-  font-size: 1.2vw;
-  vertical-align: middle;
+.footer-bx img {
+  width: 100%;
+  height: auto;
 }
 
 .footer-contact .footer-email {
@@ -471,13 +527,9 @@ footer {
 }
 
 .footer-contact p {
-  font-size: 0.8vw;
-  padding-bottom: 4px;
-}
-
-.footer-contact p i {
-  padding-right: 10px;
-  padding-bottom: 4px;
+  font-size: 14px;
+  padding-bottom: 12px;
+  color: #fff;
 }
 
 /* ----- send-mail ----- */
@@ -575,12 +627,11 @@ footer {
 
 .send-mail div {
   width: 100%;
-  padding: 2vh 0 2vh 5%;
+  padding: 2vh 0 1vh 5%;
 }
 
 .send-mail p {
   padding-bottom: 10px;
-  display: inline-block;
 }
 
 .send-mail span {
@@ -681,6 +732,12 @@ footer {
   width: 10vw;
 }
 
+.miName {
+  font-size: 20px;
+  letter-spacing: 1.6px;
+  padding-top: 6px;
+}
+
 .send-mail .my-information h5 {
   padding-bottom: 8px;
 }
@@ -707,6 +764,11 @@ footer {
   cursor: pointer;
 }
 
+
+
+
+
+
 @media (max-width: 1600px) {
 
   /* ----- send-mail ----- */
@@ -717,26 +779,15 @@ footer {
 
 @media (max-width: 1400px) {
 
+  /* ----- section4 ----- */
+  .experience {
+    width: 92%;
+  }
+
+
   /* ----- section5 ----- */
   .tabs {
     width: 60vw;
-  }
-
-  /* ----- footer ----- */
-  .footer-bx {
-    height: 100px;
-  }
-
-  .footer-blog img {
-    width: 1.8vw;
-  }
-
-  .footer-github i {
-    font-size: 1.5vw;
-  }
-
-  .footer-contact p {
-    font-size: 1vw;
   }
 
   /* ----- send-mail ----- */
@@ -754,7 +805,7 @@ footer {
 
   /* ----- section1 ----- */
   .myName {
-    font-size: 30px;
+    font-size: 34px;
   }
 
   .introduce-menu {
@@ -776,8 +827,28 @@ footer {
   }
 
   /* ----- section3 ----- */
+  .my-skills {
+    height: 1480px;
+  }
+
+  .language-chart img {
+    width: 760px;
+  }
+
+  .my-skills h2 {
+    font-size: 1.6em;
+  }
+
+  .skill-bx .item {
+    width: 80px;
+    height: 80px;
+    margin: 24px 12px 0 12px;
+  }
+
+  /* ----- section4 ----- */
   .experience {
     width: 100%;
+    padding: 40px;
   }
 
   .experience-title {
@@ -789,12 +860,19 @@ footer {
   }
 
   .experience-content {
-    margin-left: 0;
+    margin-left: 5%;
   }
 
+  .readMe {
+    margin-left: 0;
+  }
+  
   /* ----- section5 ----- */
   .oex-title {
     font-size: 20px;
+  }
+  .oex-date {
+    font-size: 14px;
   }
 
   .tabs {
@@ -802,18 +880,15 @@ footer {
   }
 
   /* ----- footer ----- */
-  .footer-blog img {
-    width: 2vw;
+  .footer-bx {
+    height: 160px;
   }
-
-  .footer-github i {
-    font-size: 1.8vw;
+  
+  .footer-item {
+    width: 54px;
+    height: 54px;
   }
-
-  .footer-contact p {
-    font-size: 1.2vw;
-  }
-
+  
   /* ----- send-mail ----- */
   .contact-btn {
     right: 3vw;
@@ -889,11 +964,11 @@ footer {
   }
 
   .myName {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .my-explanation {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .introduce-menu {
@@ -915,36 +990,29 @@ footer {
 
   /* ----- section3 ----- */
   .my-skills {
-    height: 500px;
+    height: 1440px;
   }
 
-  .my-skills p {
-    font-size: 14px;
+  .language-chart img {
+    width: 100%;
   }
 
-  .my-skills h5 {
-    font-size: 18px;
-    padding-bottom: 18px;
+  .my-skills h2 {
+    font-size: 1.4em;
   }
 
-  .skill-bx1 div {
-    padding-left: 15%;
-  }
-
-  .skill-bx2 {
-    padding-top: 30px;
-  }
-
-  .skill-bx2 div {
-    padding-left: 15%;
+  .skill-bx .item {
+    width: 74px;
+    height: 74px;
+    margin: 22px 10px 0 10px;
   }
 
   /* ----- section4 ----- */
-  .ex-title-bx {
-    width: 55%;
+  .experience {
+    padding: 30px;
   }
 
-  .experience-title a {
+  .experience-title .title {
     font-size: 22px;
   }
 
@@ -962,6 +1030,14 @@ footer {
 
   .experience-menu img {
     width: 16px;
+  }
+
+  .readMe {
+    width: 110px;
+    height: 38px;
+    margin-top: 28px;
+    font-size: 14px;
+    line-height: 34px;
   }
 
   .experience-content h5 {
@@ -1000,16 +1076,13 @@ footer {
   }
 
   /* ----- footer ----- */
-  .footer-blog img {
-    width: 2.2vw;
+  .footer-bx {
+    height: 150px;
   }
-
-  .footer-github i {
-    font-size: 2vw;
-  }
-
-  .footer-contact p {
-    font-size: 1.4vw;
+  
+  .footer-item {
+    width: 50px;
+    height: 50px;
   }
 
   /* ----- send-mail ----- */
@@ -1066,11 +1139,30 @@ footer {
   }
 
   /* ----- section3 ----- */
+  .my-skills {
+    height: 1360px;
+  }
+
+  .my-skills h2 {
+    font-size: 1.2em;
+  }
+
+  .skill-bx .item {
+    width: 66px;
+    height: 66px;
+    margin: 22px 10px 0 10px;
+  }
+
+  /* ----- section4 ----- */
+  .experience {
+    padding: 32px 20px;
+  }
+
   .ex-title-bx {
     width: 50%;
   }
 
-  .experience-title a {
+  .experience-title .title  {
     font-size: 20px;
   }
 
@@ -1088,6 +1180,14 @@ footer {
 
   .experience-menu img {
     width: 14px;
+  }
+
+  .readMe {
+    width: 100px;
+    height: 36px;
+    margin-top: 28px;
+    font-size: 12px;
+    line-height: 36px;
   }
 
   .experience-content h5 {
@@ -1110,20 +1210,12 @@ footer {
   }
 
   /* ----- footer ----- */
-  .footer-blog {
-    padding-right: 2.4%;
-  }
-
-  .footer-blog img {
-    width: 3.4vw;
-  }
-
-  .footer-github i {
-    font-size: 3vw;
+  .footer-bx {
+    height: 140px;
   }
 
   .footer-contact p {
-    font-size: 2vw;
+    font-size: 12px;
   }
 
   /* ----- send-mail ----- */
@@ -1140,11 +1232,11 @@ footer {
   }
 
   .send-mail input {
-    width: 30vw;
+    width: 40vw;
   }
 
   .send-mail textarea {
-    width: 42vw;
+    width: 52vw;
   }
 
   .send-mailBtn i {
@@ -1152,7 +1244,7 @@ footer {
   }
 
   .send-mail .my-information {
-    width: 40%;
+    display: none;
   }
 }
 
@@ -1168,7 +1260,7 @@ footer {
   }
 
   .myName {
-    font-size: 22px;
+    font-size: 26px;
   }
 
   /* ----- section2 ----- */
@@ -1181,25 +1273,45 @@ footer {
     padding-right: 2%;
   }
 
-  /* ----- section3----- */
-  .my-skills p {
-    font-size: 12px;
+  /* ----- section3 ----- */
+  .my-skills {
+    height: 1400px;
   }
 
-  .my-skills h5 {
-    font-size: 16px;
+  .language-chart img {
+    margin: 40px auto 0 auto;
+    width: 90%;
   }
+
+  .lc1 {display: none;}
+  .lc2 {display: block;}
+
+  .my-skills h2 {
+    padding-top: 60px;
+    font-size: 1.2em;
+  }
+
+  .skill-bx .item {
+    width: 66px;
+    height: 66px;
+    margin: 22px 10px 0 10px;
+  }
+
 
   /* ----- section4 ----- */
   .experience {
+    position: relative;
     display: block;
-    margin-left: 10%;
+    height: 458px;
+    padding: 0;
+    width: 90%;
   }
 
   .ex-title-bx {
     display: block;
     width: 100%;
     margin-bottom: 50px;
+    padding: 26px 14% 0 14%;
   }
 
   .experience-title {
@@ -1207,42 +1319,46 @@ footer {
   }
 
   .experience-menu {
-    display: inline-block;
-    margin: 0;
-    margin-left: 10%;
-    vertical-align: top;
-    padding-top: 16px;
-  }
-
-  .experience-menu a {
-    display: inline-block;
-  }
-
-  .experience-menu i {
-    font-size: 20px;
-    padding-right: 13px;
-  }
-
-  .experience-menu img {
-    display: inline-block;
-    vertical-align: bottom;
-    width: 20px;
-    padding: 0;
-    margin-right: 10px;
-  }
-
-  .experience-menu a:nth-child(2) {
-    margin-top: 0;
-    display: inline-block;
-  }
-
-  .experience-menu p {
     display: none;
+  }
+
+  .experience-content {
+    width: 100%;
+    padding: 0 14% 0 14%;
+    margin-left: 0;
+  }
+
+  .readMe {
+    display: none;
+  }
+
+  .readMe-phone {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 0 0 1rem 1rem;
+    background-color: rgba(0, 0, 0, .8);
+    height: 45px;
+    color: #fff;
+  }
+
+  .readMe-phone p {
+    font-size: 14px;
+    padding-top: 8px;
+  }
+  .readMe-phone i {
+    padding-top: 2px;
+    font-size: 16px;
   }
 
   /* ----- section5 ----- */
   .oex-title {
     font-size: 16px;
+  }
+  .oex-date {
+    font-size: 12px;
   }
   .tabs {
     display: none;
@@ -1254,23 +1370,6 @@ footer {
 
   .phone-tabs {
     display: block;
-  }
-
-  /* ----- footer ----- */
-  .footer-blog {
-    padding-right: 2.6%;
-  }
-
-  .footer-blog img {
-    width: 4vw;
-  }
-
-  .footer-github i {
-    font-size: 3.6vw;
-  }
-
-  .footer-contact p {
-    font-size: 2.4vw;
   }
 
   /* ----- send-mail ----- */
@@ -1289,11 +1388,11 @@ footer {
   }
 
   .send-mail input {
-    width: 42vw;
+    width: 62vw;
   }
 
   .send-mail textarea {
-    width: 42vw;
+    width: 62vw;
   }
 
   .send-mailBtn i {
@@ -1315,7 +1414,7 @@ footer {
   }
 
   .myName {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .my-explanation {
@@ -1342,21 +1441,7 @@ footer {
   }
 
   /* ----- footer ----- */
-  .footer-blog {
-    padding-right: 3%;
-  }
-
-  .footer-blog img {
-    width: 5vw;
-  }
-
-  .footer-github i {
-    font-size: 4.6vw;
-  }
-
-  .footer-contact p {
-    font-size: 3.4vw;
-  }
+  
 
   /* ----- send-mail ----- */
   .contact-btn {

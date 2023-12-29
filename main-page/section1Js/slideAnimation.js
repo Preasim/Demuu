@@ -1,5 +1,5 @@
 import { changeTextAnimation } from "./TextAnimation.js";
-import { sinceActive } from "./since-active.js";
+// import { sinceActive } from "./since-active.js";
 
 const carouselUl = document.querySelector(".carosel");
 const innerWidth = window.innerWidth;
@@ -48,7 +48,7 @@ const firstSlideInit = () => {
   changeTextAnimation(0);
   setTimeout(() => {
     Slide.classList.remove("widthUp");
-    sinceActive(currentSlide, transionTime);
+    // sinceActive(currentSlide, transionTime);
   }, firstImageScaleDownTiming);
 };
 
@@ -75,7 +75,7 @@ const fistSlideDownAni = () => {
 };
 
 const imageSlide = () => {
-  sinceActive(currentSlide, transionTime);
+  // sinceActive(currentSlide, transionTime);
   changeTextAnimation(currentSlide);
   carouselUl.style.transition = `${transionTime}s`;
   currentSlide++;
@@ -102,7 +102,7 @@ const imageSlide = () => {
       fistSlideDownAni();
 
       setTimeout(() => {
-        sinceActive(currentSlide, transionTime);
+        // sinceActive(currentSlide, transionTime);
         changeTextAnimation(currentSlide);
         currentSlide++;
         moveX = currentSlide * innerWidth;

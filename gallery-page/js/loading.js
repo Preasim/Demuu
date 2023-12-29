@@ -17,7 +17,7 @@ export const loadingScreen = () => {
   },10)
 
   setTimeout(() => {
-    gallery.style.background = '#212121';
+    gallery.style.background = '#222';
     section3Title.style.opacity = '1';
     section3Title.style.transform = 'translate(-50%, -50%) rotate(-0.003deg)';
 

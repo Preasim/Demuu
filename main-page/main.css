@@ -153,7 +153,7 @@ section {
   text-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
 }
 
-.Text a {
+.Text p {
   font-family: 'Nanum';
 }
 
@@ -261,24 +261,10 @@ section {
   background-color: #757575;
   flex-shrink: 0;
 }
-
-.item-txt {
-  transition: all 0.5s;
-  color: #757575;
-  padding-left: 10px;
-}
-
 .item-bar-active {
   width: 50px;
   height: 3px;
   background-color: #212121;
-}
-
-.item-txt-active {
-  color: #212121;
-  font-size: 20px;
-  transition: all 0.5s;
-  font-weight: 700;
 }
 
 .project-since-bars {
@@ -710,6 +696,13 @@ section {
 }
 
 /* ---------------------- MEDIA ------------------------ */
+@media (max-width: 1600px) {
+  .text1 {
+    font-size: 16vw;
+  }
+
+}
+
 @media (max-width: 1400px) {
   /* ----- 공용 ------ */
   .mediaDA {
@@ -746,16 +739,8 @@ section {
     width: 18px;
   }
 
-  .item-txt {
-    font-size: 14px;
-  }
-
   .item-bar-active {
     width: 48px;
-  }
-
-  .item-txt-active {
-    font-size: 18px;
   }
 
   .project-since-bars {
@@ -830,17 +815,8 @@ section {
     width: 16px;
   }
 
-  .item-txt {
-    padding-left: 8px;
-    font-size: 14px;
-  }
-
   .item-bar-active {
     width: 46px;
-  }
-
-  .item-txt-active {
-    font-size: 18px;
   }
 
   .project-since-bars {
@@ -949,81 +925,3 @@ section {
     font-size: 2vw;
   }
 }
-
-
-/* @media (prefers-color-scheme: light) {
-  .custom-cursor {background-color: #000; }
-  .custom-cursor-icon {background-color: #fff;}
-
-  section{background-color: #fff;}
-  #section1 {background-color: #fff;}
-
-  .item-bar{background-color: #757575;}
-  .item-txt {color: #757575;}
-  .item-bar-active {background-color: #212121;}
-  .item-txt-active {color: #212121;}
-  .item-bar2 {background-color: #757575;}
-  .item-bar2-active {background-color: #212121;}
-  .down-arrow {color: #424242;}
-
-  .portfolio-logo {background-color: #fff;}
-  .portfolio-content {background-color: #000;}
-  .portfolio-title {color: #fff;}
-  .portfolio-txt {color: #fff;}
-  .portfolio-arrow a {color: #fff;}
-
-  .section2-down-arrow {color: #fff;}
-  #section3 .title h5 {color: #000;}
-  #section3 .title p {color: #5e7283;}
-  #section3 .title a {color: #5e7283;}
-  #section3 .circle {fill: #212121;}
-  .section3-down-arrow {color: #000;}
-
-  #section4 {background-color: #fff;}
-  .spin-bx p {color: rgba(0, 0, 0, 0.6);}
-
-  #section5 {background-color: #111111;}
-  .section5-title {color: #fff;}
-  .section5-content-txt {color: #fff;}
-  .copyright-bx {color: #fff;}
-  .copyright-title a {color: #fff;}
-}
-
-
-@media (prefers-color-scheme: dark) {
-  .custom-cursor {background-color: #000; }
-  .custom-cursor-icon {background-color: #fff;}
-
-  section{background-color: #fff;}
-  #section1 {background-color: #fff;}
-
-  .item-bar{background-color: #757575;}
-  .item-txt {color: #757575;}
-  .item-bar-active {background-color: #212121;}
-  .item-txt-active {color: #212121;}
-  .item-bar2 {background-color: #757575;}
-  .item-bar2-active {background-color: #212121;}
-  .down-arrow {color: #424242;}
-
-  .portfolio-logo {background-color: #fff;}
-  .portfolio-content {background-color: #000;}
-  .portfolio-title {color: #fff;}
-  .portfolio-txt {color: #fff;}
-  .portfolio-arrow a {color: #fff;}
-
-  .section2-down-arrow {color: #fff;}
-  #section3 .title h5 {color: #000;}
-  #section3 .title p {color: #5e7283;}
-  #section3 .title a {color: #5e7283;}
-  #section3 .circle {fill: #212121;}
-  .section3-down-arrow {color: #000;}
-
-  #section4 {background-color: #fff;}
-  .spin-bx p {color: rgba(0, 0, 0, 0.6);}
-
-  #section5 {background-color: #111111;}
-  .section5-title {color: #fff;}
-  .section5-content-txt {color: #fff;}
-  .copyright-bx {color: #fff;}
-  .copyright-title a {color: #fff;}
-} */
