@@ -1,0 +1,179 @@
+@import url("../../common/reset.css");
+
+body {
+  overflow-x: hidden;
+}
+
+#toc {
+  position: fixed;
+  border-radius: 20px;
+  bottom: 10%;
+  right: 3%;
+}
+
+#toc p {
+  font-size: 18px;
+  padding: 10px 0;
+  border-bottom: 1px solid #000;
+}
+
+code {
+  line-height: 24px;
+}
+
+summary {
+  font-size: 20px;
+  margin-bottom: 30px;
+  background-color: #000;
+  display: inline-block;
+  color: #fff;
+  border-radius: 12px;
+  padding: 14px;
+}
+summary:hover {
+  cursor: pointer;
+}
+
+
+.projectName {
+  text-align: center;
+  font-size: 5.5em;
+  font-weight: 600;
+  letter-spacing: 6px;
+  padding-top: 8px;
+}
+
+.teamName {
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 18px;
+  padding-top: 4px;
+  padding-left: 18px;
+}
+.date {
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 8px;
+  padding-top: 180px;
+}
+
+#toggle-code {
+  width: 154px;
+  height: 44px;
+  transition: all .5s;
+  overflow: hidden;
+  background-color: #23241f;
+  border-radius: 26px;
+  margin-bottom: 34px;
+  margin-top: 18px;
+}
+
+.toggle-code-btn {
+  width: 154px;
+  height: 44px;
+  background-color: #23241f;
+  border-radius: 26px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.toggle-code-btn p {
+  line-height: 44px;
+  display: inline-block;
+}
+
+.toggle-code-btn i {
+  padding-left: 4px;
+}
+
+#toggle-down {
+  display: none;
+}
+
+.cl1 {
+  padding: 0 0 100px 0;
+}
+.cl2 {
+  padding: 0 0 66px 0;
+}
+.cl3 {
+  padding: 0 0 44px 0;
+}
+.cl4 {
+  padding: 0 0 22px 0;
+}
+
+/* ----------------------- summary ------------------ */
+#summary {margin-top: 300px;}
+.title {
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.summary-link a {color: #757575;}
+.summary-link a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+.portfolio p {
+  font-size: 18px;
+  padding-bottom: 22px;
+}
+
+/* ----------------------- architecture ------------------ */
+#architecture {margin-top: 180px;}
+#architecture .title {
+  display: inline-block;
+  padding-right: 14px;
+}
+.stack {text-align: center;}
+#architecture img {
+  width: 70%;
+  margin-top: 40px;
+}
+
+#architecture p {
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 18px;
+}
+#architecture a:hover {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+
+#experience {
+  margin-top: 180px;
+}
+
+#retrospective {margin-top: 180px;}
+/* .link {
+  margin-top: 20px;
+  text-align: center;
+}
+.link .item {padding-bottom: 16px; display: inline-block;}
+.link .item a {display: flex;}
+.link .item .name {
+  width: 134px;
+  height: 50px;
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link .item .icon {
+  display: flex;
+  width: 40px;
+  border: 2px solid #000;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+} */
