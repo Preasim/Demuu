@@ -585,3 +585,43 @@ div.rotate135 {
     display: block;
   }
 }
+
+
+/* ------------------ footer ----------------- */
+.footer-bx {
+  margin-top: 8vh;
+  height: 110px;
+  background-color: #222;
+}
+
+.footer-contact {
+  padding-top: 2vh;
+  text-align: center;
+  font-weight: 700;
+}
+
+.footer-contact .footer-email {
+  padding-top: 2vh;
+}
+
+.footer-contact p {
+  font-size: 14px;
+  padding-bottom: 12px;
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .footer-bx {
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-bx {
+    height: 96px;
+  }
+
+  .footer-contact p {
+    font-size: 12px;
+  }
+}
