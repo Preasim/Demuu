@@ -484,53 +484,12 @@ body {
   transform: scale(1);
 }
 
-
 /* ----- footer ----- */
 footer {
   position: relative;
   z-index: -1;
 }
 
-.footer-bx {
-  margin-top: 8vh;
-  height: 180px;
-  background-color: #222;
-}
-
-.footer-contact {
-  padding-top: 2vh;
-  text-align: center;
-  font-weight: 700;
-}
-
-.footer-item {
-  width: 60px;
-  height: 60px;
-  display: inline-block;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  margin: 0 12px;
-}
-
-.footer-blog {
-  padding-right: 1%;
-}
-
-
-.footer-bx img {
-  width: 100%;
-  height: auto;
-}
-
-.footer-contact .footer-email {
-  padding-top: 2vh;
-}
-
-.footer-contact p {
-  font-size: 14px;
-  padding-bottom: 12px;
-  color: #fff;
-}
 
 /* ----- send-mail ----- */
 .contact-btn {
@@ -878,16 +837,6 @@ footer {
   .tabs {
     width: 80vw;
   }
-
-  /* ----- footer ----- */
-  .footer-bx {
-    height: 160px;
-  }
-  
-  .footer-item {
-    width: 54px;
-    height: 54px;
-  }
   
   /* ----- send-mail ----- */
   .contact-btn {
@@ -1075,16 +1024,6 @@ footer {
     font-size: 12px;
   }
 
-  /* ----- footer ----- */
-  .footer-bx {
-    height: 150px;
-  }
-  
-  .footer-item {
-    width: 50px;
-    height: 50px;
-  }
-
   /* ----- send-mail ----- */
   .contact-btn {
     right: 2vw;
@@ -1208,16 +1147,7 @@ footer {
     width: 150px;
     font-size: 14px;
   }
-
-  /* ----- footer ----- */
-  .footer-bx {
-    height: 140px;
-  }
-
-  .footer-contact p {
-    font-size: 12px;
-  }
-
+  
   /* ----- send-mail ----- */
   .contact-btn {
     bottom: 2vh;
@@ -1439,8 +1369,6 @@ footer {
   .phone-tabs .phone-tab-body>div {
     font-size: 10px;
   }
-
-  /* ----- footer ----- */
   
 
   /* ----- send-mail ----- */
