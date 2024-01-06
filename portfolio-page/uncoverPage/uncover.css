@@ -291,7 +291,7 @@ summary:hover {
     width: 90%;
   }
 
-  body {
+  /* body {
     position: relative;
     z-index: -2;
   }
@@ -299,7 +299,7 @@ summary:hover {
   header {
     position: relative;
     z-index: 1;
-  }
+  } */
 
   .site {
     position: absolute;
