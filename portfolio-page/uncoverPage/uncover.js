@@ -24,7 +24,7 @@ function toggleCode() {
       ];
     
       if (!data.isOpen) {
-        togglecode.style.width = '100%';
+        togglecode.style.width = '95%';
         togglecode.style.height = data.height;
         tr.style.display = 'none';
         td.style.display = 'inline-block';
