@@ -1,7 +1,9 @@
 @import url("../../common/reset.css");
 
 body {
+  position: relative;
   overflow-x: hidden;
+  z-index: -2;
 }
 
 /* #toc {
@@ -290,16 +292,6 @@ summary:hover {
   .break-container {
     width: 90%;
   }
-
-  /* body {
-    position: relative;
-    z-index: -2;
-  }
-
-  header {
-    position: relative;
-    z-index: 1;
-  } */
 
   .site {
     position: absolute;
