@@ -136,7 +136,6 @@ summary:hover {
 }
 
 
-#summary {margin-top: 300px;}
 .title {
   font-size: 2.5em;
   font-weight: 600;
@@ -146,6 +145,29 @@ summary:hover {
 .portfolio p {
   font-size: 18px;
   padding-bottom: 22px;
+}
+#summary {margin-top: 300px;}
+.summary-site {
+  display: none;
+  vertical-align: middle;
+  margin-bottom: 8px;
+}
+.summary-site .item {
+  position: relative;
+  border: 2px solid #424242;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 6px;
+  z-index: -1;
+}
+.summary-site .item img {
+  position: absolute;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* ----------------------- architecture ------------------ */
@@ -174,7 +196,10 @@ summary:hover {
   margin-top: 180px;
 }
 
-#retrospective {margin: 180px 0 120px 0;}
+#retrospective {
+  margin-top: 180px;
+  padding-bottom: 120px;
+}
 
 
 
@@ -225,6 +250,16 @@ summary:hover {
     font-size: 16px;
   }
 
+  #toggle-code {
+    width: 150px;
+    height: 42px;
+  }
+
+  .toggle-code-btn {
+    width: 150px;
+    height: 42px;
+  }
+
   .projectName {
     font-size: 5em;
   }
@@ -253,16 +288,42 @@ summary:hover {
 
 @media (max-width: 992px) {
   .break-container {
-    width: 80%;
+    width: 90%;
+  }
+
+  body {
+    position: relative;
+  }
+
+  .site {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
   }
   .site .item {
-    width: 52px;
-    height: 52px;
+    width: 56px;
+    height: 56px;
+    display: inline-block;
   }
 
   code {
     font-size: 15px;
   }
+
+  #toggle-code {
+    width: 144px;
+    height: 40px;
+  }
+
+  .toggle-code-btn {
+    width: 144px;
+    height: 40px;
+  }
+
 
   .projectName {
     font-size: 4.6em;
@@ -287,26 +348,129 @@ summary:hover {
   }
 
   .toggle-code-btn p {
-    line-height: 44px;
+    line-height: 40px;
   }
   
 
   #summary {margin-top: 220px;}
+  #summary .title {
+    display: inline-block;
+    padding-right: 20px;
+  }
+  .summary-site {
+    display: inline-block;
+  }
+
 
   #architecture img {
     width: 90%;
+  }
+
+  #retrospective {
+    padding-bottom: 140px;
   }
 }
 
 
 @media (max-width: 768px) {
+  code {
+    font-size: 14px;
+  }
 
+  #toggle-code {
+    width: 140px;
+  }
+
+  .toggle-code-btn {
+    width: 140px;
+  }
+
+  .site .item {
+    width: 54px;
+    height: 54px;
+  }
+
+  .title {
+    font-size: 1.7em;
+  }
+
+  .portfolio p {
+    font-size: 14px;
+  }
+
+  .summary-site .item {
+    width: 38px;
+    height: 38px;
+  }
+
+  #architecture img {
+    width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
+  code {
+    font-size: 12px;
+  }
 
+  #toggle-code {
+    width: 126px;
+  }
+
+  .toggle-code-btn {
+    width: 126px;
+  }
+
+  .projectName {
+    font-size: 4.2em;
+  }
+  
+  .teamName {
+    font-size: 14px;
+    letter-spacing: 17px;
+  }
+  .date {
+    font-size: 14px;
+    letter-spacing: 8px;
+  }
+
+  .site .item {
+    width: 50px;
+    height: 50px;
+  }
+
+  .title {
+    font-size: 1.6em;
+  }
+
+  .portfolio p {
+    font-size: 12px;
+  }
+
+  .summary-site .item {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 @media (max-width: 440px) {
+
+  .projectName {
+    font-size: 3.8em;
+  }
+  
+  .teamName {
+    font-size: 13px;
+    letter-spacing: 14.5px;
+  }
+  .date {
+    font-size: 13px;
+    letter-spacing: 7px;
+  }
+
+  .site .item {
+    width: 48px;
+    height: 48px;
+  }
 
 }
