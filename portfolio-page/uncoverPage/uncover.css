@@ -296,6 +296,11 @@ summary:hover {
     z-index: -2;
   }
 
+  header {
+    position: relative;
+    z-index: 1;
+  }
+
   .site {
     position: absolute;
     bottom: 0;
