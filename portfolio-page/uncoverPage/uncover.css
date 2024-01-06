@@ -423,15 +423,16 @@ summary:hover {
 
   .projectName {
     font-size: 4.2em;
+    letter-spacing: 2px;
   }
   
   .teamName {
     font-size: 14px;
-    letter-spacing: 17px;
+    letter-spacing: 15px;
   }
   .date {
     font-size: 14px;
-    letter-spacing: 8px;
+    letter-spacing: 6.5px;
   }
 
   .site .item {
@@ -447,9 +448,22 @@ summary:hover {
     font-size: 12px;
   }
 
+  #summary .title {
+    padding-right: 10px;
+  }
+
   .summary-site .item {
     width: 35px;
     height: 35px;
+    margin: 0 4px;
+  }
+
+  #architecture .title {
+    padding-right: 10px;
+  }
+
+  #architecture p {
+    padding: 0 6px;
   }
 }
 
@@ -461,11 +475,11 @@ summary:hover {
   
   .teamName {
     font-size: 13px;
-    letter-spacing: 14.5px;
+    letter-spacing: 13px;
   }
   .date {
     font-size: 13px;
-    letter-spacing: 7px;
+    letter-spacing: 6px;
   }
 
   .site .item {
@@ -473,4 +487,24 @@ summary:hover {
     height: 48px;
   }
 
+  .title {
+    font-size: 1.4em;
+  }
+
+  #summary .title {
+    padding-right: 5px;
+  }
+  .summary-site .item {
+    width: 30px;
+    height: 30px;
+    margin-top: 6px;
+  }
+
+  #architecture .title {
+    padding-right: 4px;
+  }
+
+  #architecture p {
+    padding: 0 2px;
+  }
 }
