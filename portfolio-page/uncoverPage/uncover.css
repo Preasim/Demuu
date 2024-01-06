@@ -293,6 +293,7 @@ summary:hover {
 
   body {
     position: relative;
+    z-index: -2;
   }
 
   .site {
