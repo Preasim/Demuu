@@ -1,0 +1,33 @@
+.projectName {
+  text-align: center;
+  font-size: 6.5em;
+  font-weight: 600;
+  letter-spacing: 28px;
+  padding-top: 8px;
+}
+
+.teamName {
+  text-align: center;
+  font-size: 24px;
+  padding-top: 4px;
+  padding-right: 18px;
+  letter-spacing: 8px;
+}
+.date {
+  text-align: center;
+  font-size: 22px;
+  padding-top: 180px;
+  letter-spacing: 5px;
+  padding-right: 30px;
+}
+
+.sum-img {
+  display: flex;
+  justify-content: center;
+}
+
+.sum-img .item {
+  padding: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,.2), 0 3px 6px rgba(0,0,0,.2);
+  margin: 16px;
+}
