@@ -1,72 +1,3 @@
-@import url("../../common/reset.css");
-
-body {
-  position: relative;
-  overflow-x: hidden;
-  z-index: -2;
-}
-
-/* #toc {
-  display: none;
-  position: fixed;
-  border-radius: 20px;
-  top: 14%;
-  right: 2%;
-}
-
-#toc p {
-  font-size: 18px;
-  padding: 10px 0;
-  border-bottom: 1px solid #000;
-  text-align: right;
-} */
-
-
-
-.site {
-  position: fixed;
-  right: 2%;
-  bottom: 4%;
-  transition: all .1s;
-  display: inline-block;
-}
-.site a {
-  margin: 0 20px;
-}
-.site .item {
-  position: relative;
-  border: 3px solid #424242;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-}
-.site .item img {
-  position: absolute;
-  height: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-code {
-  line-height: 24px;
-  font-size: 18px;
-}
-
-summary {
-  font-size: 20px;
-  margin-bottom: 30px;
-  background-color: #000;
-  display: inline-block;
-  color: #fff;
-  border-radius: 12px;
-  padding: 14px;
-}
-summary:hover {
-  cursor: pointer;
-}
-
-
 .projectName {
   text-align: center;
   font-size: 5.5em;
@@ -89,134 +20,7 @@ summary:hover {
   padding-top: 180px;
 }
 
-#toggle-code {
-  width: 154px;
-  height: 44px;
-  transition: all .5s;
-  overflow: hidden;
-  background-color: #23241f;
-  border-radius: 26px;
-  margin-bottom: 34px;
-  margin-top: 18px;
-}
-
-.toggle-code-btn {
-  width: 154px;
-  height: 44px;
-  background-color: #23241f;
-  border-radius: 26px;
-  color: #fff;
-  text-align: center;
-  cursor: pointer;
-  transition: all .5s;
-}
-
-.toggle-code-btn p {
-  line-height: 44px;
-  display: inline-block;
-}
-
-.toggle-code-btn i {
-  padding-left: 4px;
-}
-
-#toggle-down {
-  display: none;
-}
-
-.cl1 {
-  padding: 0 0 100px 0;
-}
-.cl2 {
-  padding: 0 0 66px 0;
-}
-.cl3 {
-  padding: 0 0 44px 0;
-}
-.cl4 {
-  padding: 0 0 22px 0;
-}
-
-
-.title {
-  font-size: 2.5em;
-  font-weight: 600;
-  margin-bottom: 32px;
-}
-
-.portfolio p {
-  font-size: 18px;
-  padding-bottom: 22px;
-}
-#summary {margin-top: 300px;}
-.summary-site {
-  display: none;
-  vertical-align: middle;
-  margin-bottom: 8px;
-}
-.summary-site .item {
-  position: relative;
-  border: 2px solid #424242;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0 6px;
-  z-index: -1;
-}
-.summary-site .item img {
-  position: absolute;
-  height: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* ----------------------- architecture ------------------ */
-#architecture {margin-top: 180px;}
-#architecture .title {
-  display: inline-block;
-  padding-right: 14px;
-}
-.stack {text-align: center;}
-#architecture img {
-  width: 70%;
-  margin-top: 40px;
-}
-
-#architecture p {
-  display: inline-block;
-  padding: 0 10px;
-}
-#architecture a:hover {
-  text-decoration: underline;
-  font-weight: 600;
-}
-
-
-#experience {
-  margin-top: 180px;
-}
-
-#retrospective {
-  margin-top: 180px;
-  padding-bottom: 120px;
-}
-
-
-
-
-
 @media (max-width: 1400px) {
-  .site .item {
-    width: 64px;
-    height: 64px;
-  }
-
-  code {
-    font-size: 17px;
-  }
-
   .projectName {
     font-size: 5.2em;
   }
@@ -228,39 +32,9 @@ summary:hover {
     font-size: 20px;
   }
   
-  .title {
-    font-size: 2.2em;
-  }
-
-  .portfolio p {
-    font-size: 17px;
-  }
-
-  #architecture img {
-    width: 80%;
-  }
 }
 
-
 @media (max-width: 1200px) {
-  .site .item {
-    width: 58px;
-    height: 58px;
-  }
-
-  code {
-    font-size: 16px;
-  }
-
-  #toggle-code {
-    width: 150px;
-    height: 42px;
-  }
-
-  .toggle-code-btn {
-    width: 150px;
-    height: 42px;
-  }
 
   .projectName {
     font-size: 5em;
@@ -272,57 +46,9 @@ summary:hover {
   .date {
     font-size: 19px;
   }
-  
-  .title {
-    font-size: 2em;
-  }
-
-  .portfolio p {
-    font-size: 16px;
-  }
-
-  #summary {margin-top: 260px;}
-
-  #architecture img {
-    width: 90%;
-  }
 }
 
 @media (max-width: 992px) {
-  .break-container {
-    width: 90%;
-  }
-
-  .site {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    margin-bottom: 30px;
-    width: 100%;
-  }
-  .site .item {
-    width: 56px;
-    height: 56px;
-    display: inline-block;
-  }
-
-  code {
-    font-size: 15px;
-  }
-
-  #toggle-code {
-    width: 144px;
-    height: 40px;
-  }
-
-  .toggle-code-btn {
-    width: 144px;
-    height: 40px;
-  }
-
-
   .projectName {
     font-size: 4.6em;
   }
@@ -335,90 +61,9 @@ summary:hover {
     font-size: 16px;
     font-weight: 600;
   }
-  
-  .title {
-    font-size: 1.8em;
-  }
-
-  .portfolio p {
-    font-size: 15px;
-    line-height: 22px;
-  }
-
-  .toggle-code-btn p {
-    line-height: 40px;
-  }
-  
-
-  #summary {margin-top: 220px;}
-  #summary .title {
-    display: inline-block;
-    padding-right: 20px;
-  }
-  .summary-site {
-    display: inline-block;
-  }
-
-
-  #architecture img {
-    width: 90%;
-  }
-
-  #retrospective {
-    padding-bottom: 140px;
-  }
-}
-
-
-@media (max-width: 768px) {
-  code {
-    font-size: 14px;
-  }
-
-  #toggle-code {
-    width: 140px;
-  }
-
-  .toggle-code-btn {
-    width: 140px;
-  }
-
-  .site .item {
-    width: 54px;
-    height: 54px;
-  }
-
-  .title {
-    font-size: 1.7em;
-  }
-
-  .portfolio p {
-    font-size: 14px;
-  }
-
-  .summary-site .item {
-    width: 38px;
-    height: 38px;
-  }
-
-  #architecture img {
-    width: 100%;
-  }
 }
 
 @media (max-width: 576px) {
-  code {
-    font-size: 12px;
-  }
-
-  #toggle-code {
-    width: 126px;
-  }
-
-  .toggle-code-btn {
-    width: 126px;
-  }
-
   .projectName {
     font-size: 4.2em;
     letter-spacing: 2px;
@@ -432,41 +77,9 @@ summary:hover {
     font-size: 14px;
     letter-spacing: 6.5px;
   }
-
-  .site .item {
-    width: 50px;
-    height: 50px;
-  }
-
-  .title {
-    font-size: 1.6em;
-  }
-
-  .portfolio p {
-    font-size: 12px;
-  }
-
-  #summary .title {
-    padding-right: 10px;
-  }
-
-  .summary-site .item {
-    width: 35px;
-    height: 35px;
-    margin: 0 4px;
-  }
-
-  #architecture .title {
-    padding-right: 10px;
-  }
-
-  #architecture p {
-    padding: 0 6px;
-  }
 }
 
 @media (max-width: 440px) {
-
   .projectName {
     font-size: 3.8em;
   }
@@ -478,31 +91,5 @@ summary:hover {
   .date {
     font-size: 13px;
     letter-spacing: 6px;
-  }
-
-  .site .item {
-    width: 48px;
-    height: 48px;
-  }
-
-  .title {
-    font-size: 1.4em;
-  }
-
-  #summary .title {
-    padding-right: 5px;
-  }
-  .summary-site .item {
-    width: 30px;
-    height: 30px;
-    margin-top: 6px;
-  }
-
-  #architecture .title {
-    padding-right: 4px;
-  }
-
-  #architecture p {
-    padding: 0 2px;
   }
 }
