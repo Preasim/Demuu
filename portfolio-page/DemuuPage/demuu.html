@@ -96,27 +96,27 @@
           </a>
         </div>
         <h3 class="role">Front-End Development</h3>
-        <p>개인 프로젝트 / Demuu Portfolio</p>
+        <p>개인 프로젝트 / Demuu (Portfolio)</p>
         <div class="cl4"></div>
-        <p>저를 소개하는 포트폴리오 웹사이트입니다.</p>
-        <p>포트폴리오 웹은 단순한 이력서와 포트폴리오보다 저를 더 잘 표현할 수 있을 것 같아 만들게 되었습니다.</p>
+        <p>포트폴리오, 프로젝트 갤러리, 그리고 블로그 등을 한데 모은 통합 웹입니다.</p>
+        <p>이 웹사이트는 단순한 이력서와 포트폴리오 이상으로, 저를 보다 풍부하게 소개하고자 만들게 되었습니다.</p>
+        <p>포트폴리오, 프로젝트, 블로그 등 저와 관련된 모든 정보를 한 곳에서 확인할 수 있습니다.</p>
         <div class="cl3"></div>
-        <p>Java와 Spring Boot를 활용한 프로젝트로, 팀 내에서의 첫 번째 경험이었습니다.</p>
-        <p>팀원들과 함께 처음 시도하는 프로젝트였기에 서로 질의응답하며 고민하는 과정이 흥미로웠고, 이를 통해 많이 배울 수 있었습니다.</p>
-        <p>커뮤니케이션 능력 향상과 함께 Java, Spring Boot에 대한 익숙함도 함께 얻을 수 있었습니다.</p>
-        <div class="cl3"></div>
-        <p>이 프로젝트는 이전까지의 공부와는 다르게 팀 프로젝트를 성공적으로 마무리한 경험이었습니다.</p>
-        <p>이를 통해 자발적인 학습과 실전 경험의 중요성을 깨달았으며, 이전과는 다른 수준의 자신감을 얻을 수 있었습니다.</p>
+        <p>웹 개발을 처음 공부했을 때부터 제작하고 싶었던 동적인 요소들이 풍부한 인터랙티브 웹을 디자인했습니다.</p>
+        <p>사용자가 웹을 탐색하는 동안 저만의 작업물과 이야기에 몰입할 수 있는 환경을 조성할 수 있을 것이라고 생각합니다.</p>
       </div>
 
       <div id="experience">
         <h2 class="title">Experience</h2>
-        <p>이 프로젝트에서 저는 팀 리더로서 기획부터 아키텍처 설계, 가이드 문서 작성, 디자인 아이디어 제시를 주도했습니다.</p>
-        <p>기술적인 측면에서는 주로 플레이리스트와 관련된 부분에 집중했습니다.</p>
-        <p>구체적으로는 플레이리스트, 플레이리스트 댓글, 좋아요 기능, 그리고 태그 및 플레이리스트 태그를 구현하는 등의 작업을 수행했습니다.</p>
+        <p>다양하고 동적인 요소들이 많아 처음에 호스팅을 시작했을 때는 트래픽이 급증하여 정상적인 동작이 불가능한 정도로 렉이 발생했습니다.</p>
+        <p>이 문제를 해결하기 위해 꽤 어려운 최적화 작업을 수행했습니다.</p>
+        <p>초기에는 Github을 이용해 호스팅을 시도했지만, 해외에 서버가 위치해 있어 딜레이가 발생하였기 때문에</p>
+        <p>Https를 포기하고 국내 서버로 이전했습니다. 그 후에는 추가적인 최적화 작업을 진행하였습니다.</p>
+        <div class="cl4"></div>
+        <p><a href="https://preasim.github.io/81" style="text-decoration: underline;">Server / Database 비용 절감 블로그 ></a></p>
         <div class="cl3"></div>
-        <p>플레이리스트는 멤버, 음악, 태그, 댓글, 좋아요 등 모든 부분과 연결되어 있어 예상보다 복잡한 작업이었습니다.</p>
-        <p>미숙함으로 인해 다른 테이블과의 연관관계 매핑이 어려웠고, 이에 따른 작업이 상당한 시간을 필요로 했습니다.</p>
+        <p>메인 페이지는 가장 동적인 요소가 많은 페이지여서 스크롤 시 한 섹션 씩 이동되게 만들었고,</p>
+        <p>현재 보고 있는 섹션이 아니면 다른 섹션들은 정지되도록 구현했습니다.</p>
 
         <div id="toggle-code" class="toggle-code-1">
           <div class="toggle-code-btn tcb1">
@@ -125,18 +125,155 @@
             <i id="toggle-down" class="fa-solid fa-angle-down td1"></i>
           </div>
           <pre>
-            <code class="language-java">
+            <code class="language-js">
+              import { section2Animation } from "./section2Js/section2Entry.js";
+              import { section3Intro } from "./section3Js/section3.js";
+              import { tubeIntro } from "./section4Js/tubeIntro.js";
 
+              let timer;
+              function scroll() {
+                window.addEventListener("scroll", ()=> {
+                  let scrollPosition = Math.floor(window.scrollY || document.documentElement.scrollTop);
+                  section2Animation(scrollPosition);
+                  section3Intro(scrollPosition);
+                  tubeIntro(scrollPosition);  
+                });
+
+                window.onload = () => {
+                  const sections = document.querySelectorAll(".section");
+                  const sectionCount = sections.length;
+
+                  let startY = 0;
+                  let endY = 0;
+                  let eventListenerBySize;
+                  let isTouchMove = false; // 터치 슬라이드 여부를 확인하기 위한 플래그 변수
+
+                  eventListenerBySize = "mousewheel";
+
+                  const handleScroll = (event) => {
+                    event.preventDefault();
+                    if (timer) {
+                      clearTimeout(timer);
+                    }
+                    timer = setTimeout(() => {
+                      let delta = 0;
+
+                      if (!event) event = window.event;
+                      if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) delta = -delta;
+                      } else if (event.detail) delta = -event.detail / 3;
+
+                      let moveTop = window.scrollY;
+                      let currentSectionIndex = -1;
+
+                      // Find the index of the currently visible section
+                      for (let i = 0; i < sectionCount; i++) {
+                        const rect = sections[i].getBoundingClientRect();
+                        if (
+                          rect.top >= 0 &&
+                          window.getComputedStyle(sections[i]).display !== "none"
+                        ) {
+                          currentSectionIndex = i;
+                          break;
+                        }
+                      }
+
+                      // Scroll down: Move to the next section
+                      if (delta < 0) {
+                        if (currentSectionIndex < sectionCount - 1) {
+                          moveTop +=
+                            sections[currentSectionIndex + 1].getBoundingClientRect().top;
+                        }
+                      }
+                      // Scroll up: Move to the previous section
+                      else if (delta > 0) {
+                        if (currentSectionIndex > 0) {
+                          moveTop +=
+                            sections[currentSectionIndex - 1].getBoundingClientRect().top;
+                        }
+                      }
+
+                      window.scrollTo({ top: moveTop, left: 0, behavior: "smooth" });
+                    }, 200);
+                  };
+
+                  window.addEventListener(eventListenerBySize, handleScroll, {
+                    passive: false,
+                  });
+                  window.addEventListener(
+                    "touchstart",
+                    (event) => {
+                      startY = event.touches[0].clientY;
+                      isTouchMove = false; // 터치 시작 시 플래그 초기화
+                    },
+                    { passive: false }
+                  );
+                  window.addEventListener(
+                    "touchmove",
+                    (event) => {
+                      event.preventDefault();
+                      endY = event.touches[0].clientY;
+                      isTouchMove = true; // 터치 이동 시 플래그 설정
+                    },
+                    { passive: false }
+                  );
+                  window.addEventListener("touchend", () => {
+                    if (!isTouchMove) return; // 터치 이동이 없을 경우 스크롤 작동하지 않음
+
+                    const delta = endY - startY;
+                    let moveTop = window.scrollY;
+                    let currentSectionIndex = -1;
+
+                    // Find the index of the currently visible section
+                    for (let i = 0; i < sectionCount; i++) {
+                      const rect = sections[i].getBoundingClientRect();
+                      if (
+                        rect.top >= 0 &&
+                        window.getComputedStyle(sections[i]).display !== "none"
+                      ) {
+                        currentSectionIndex = i;
+                        break;
+                      }
+                    }
+
+                    // Swipe up: Move to the next section
+                    if (delta > 0) {
+                      if (currentSectionIndex > 0) {
+                        moveTop +=
+                          sections[currentSectionIndex - 1].getBoundingClientRect().top;
+                      }
+                    }
+                    // Swipe down: Move to the previous section
+                    else if (delta < 0) {
+                      if (currentSectionIndex < sectionCount - 1) {
+                        moveTop +=
+                          sections[currentSectionIndex + 1].getBoundingClientRect().top;
+                      }
+                    }
+
+                    window.scrollTo({ top: moveTop, left: 0, behavior: "smooth" });
+                  });
+                };
+              }
+
+              export const scrollAction = () => {
+                scroll();
+              };
             </code>
           </pre>
         </div>
         
-        <p>이 경험을 통해 데이터베이스 디자인과 연관된 실무 능력을 향상시키는 계기가 되었습니다.</p>
-        <div class="cl2"></div>
-        <p>또한 프로젝트가 진행되면서, 사용자의 역할(role)에 따른 권한 설정에 대한 이슈도 함께 다뤘습니다.</p>
-        <p>이는 관리자 계정과 사용자 계정으로 권한을 나누고, 그에 따라 다른 기능을 제공하도록 하였습니다.</p>
-        <p>이 부분은 프로젝트 시작 전부터 공부하고 싶었던 주제였으며,</p>
-        <p>실제로 구현해보니 이론에서 얻지 못했던 깊은 이해와 새로운 인사이트를 얻을 수 있었습니다.</p>
+        <p>또한 모든 이미지들의 해상도를 한 단계 낮추고 압축 후 webp 확장자로 변환해 용량을 약 60% 이상 줄였습니다.</p>
+        <div class="cl3"></div>
+        <p>아이콘을 사용하기 위해 Font Awesome를 cdn이나 all.css 파일 대신</p>
+        <p>사용 중인 Font Awesome 아이콘만 가져와 따로 CSS 파일을 만들어서 용량을 110kb에서 6kb로 크게 줄였습니다.</p>
+        <div class="cl3"></div>
+        <p>특히 Gallery페이지에서는 기기에 부하가 가장 많이 걸리는 페이지였습니다.</p>
+        <p>Gallery 페이지에 있는 프로젝트 배너들 중 몇몇은 수많은 DOM을 직접 회전시켜 만드는 애니메이션이라 동영상으로 교체하였고,</p>
+        <p>가운데에 있는 배너를 제외하고 다른 배너들은 모두 애니메이션이 작동 중지 되도록 만들었습니다.</p>
+        <div class="cl3"></div>
+        <p>가장 아쉬운 건 아직도 성능이 낮은 기기에서는 렉이 유발되어 입체감이 있게 보이게 하기 위해 넣었던 반사효과를 삭제했습니다.</p>
 
         <div id="toggle-code" class="toggle-code-2">
           <div class="toggle-code-btn tcb2">
@@ -145,15 +282,23 @@
             <i id="toggle-down" class="fa-solid fa-angle-down td2"></i>
           </div>
           <pre>
-            <code class="language-java">
-
+            <code class="language-css">
+              /* 반사효과는 렌더링 부하 문제로 성능 낮은 기기에서 사용 불가 */
+              -webkit-box-reflect: 
+                below 0vw -webkit-gradient
+                  (linear, left top, left bottom, from(transparent), 
+                  color-stop(0.65, transparent), to(rgba(255, 255, 255, 0.4)));
             </code>
           </pre>
         </div>
 
+        <p>그 외에도 Home과 Gallery 페이지를 PC 및 Mobile 전용 페이지로 따로 제작하여 빠른 로드를 실현하였습니다.</p>
+        <p>이 최적화 작업을 완료한 후에는 다시 Github 호스팅으로 변경했습니다.</p>
         <div class="cl2"></div>
-        <p>마지막으로 프로젝트 중에 발생한 동시성 문제에 대한 해결책 모색과 코드 리팩토링을 통해 성능 개선을 이루어냈습니다.</p>
-        <p>동시에 여러 사용자가 좋아요 기능을 사용할 때, 좋아요 수는 1만 증가하는 이 동시성 문제는 이번 프로젝트 중 가장 깊게 고민한 문제입니다.</p>
+        <p>기술적으로 어려웠던 문제도 몇 가지 있었습니다.</p>
+        <p>먼저, 메인 페이지의 첫 번째 섹션인 텍스트 및 이미지 슬라이드 부분입니다.</p>
+        <p>텍스트와 연도(year)는 상하로, 이미지는 좌우로, 슬라이드되는 애니메이션을 구현하는 것이었는데,</p>
+        <p>처음에는 간단하게 처리될 것이라고 생각했지만 실제로는 수학적인 계산이 많이 필요한 부분이어서 예상보다 훨씬 어려웠습니다.</p>
 
         <div id="toggle-code" class="toggle-code-3">
           <div class="toggle-code-btn tcb3">
@@ -162,39 +307,147 @@
             <i id="toggle-down" class="fa-solid fa-angle-down td3"></i>
           </div>
           <pre>
-            <code class="language-java">
+            <code class="language-js">
+              import { changeTextAnimation } from "./TextAnimation.js";
+              import { sinceActive } from "./since-active.js";
 
+              const carouselUl = document.querySelector(".carosel");
+              const innerWidth = window.innerWidth;
+              const transionTime = 1;
+              //가장 처음 이미지가 줄어드는 시간을 조절하는 변수 현재 3초
+              const firstImageScaleDownTiming = 3000;
+              //1000은 transition이 끝나자 마자 scaleUp시작
+              let scaleUpTiming = transionTime * 1200;
+              //스케일 up이 끝나고 다시 줄어들 타이밍 1000은 1초 뒤
+              const scaleDownTiming = scaleUpTiming + transionTime * 1000 + 1000;
+              let setTimeOutTime = 0;
+              let timeId = "";
+              let currentItemLength = 0;
+              let currentSlide = 1;
+              let timer = 4000;
+
+              const createCopy = () => {
+                const caroselItem = document.querySelectorAll(".carosel li");
+                const copyLastItem = caroselItem[caroselItem.length - 1].cloneNode(true);
+                const copyFirstItem = caroselItem[0].cloneNode(true);
+                copyFirstItem.childNodes[1].classList.remove("widthUp");
+                carouselUl.insertAdjacentElement("afterbegin", copyLastItem);
+                carouselUl.insertAdjacentElement("beforeend", copyFirstItem);
+                setCarouselWidth();
+              };
+
+              const setCarouselWidth = () => {
+                currentItemLength = document.querySelectorAll(".carosel li").length;
+                carouselUl.style.width = currentItemLength * innerWidth + "px";
+                initSlidePosition();
+              };
+
+              const initSlidePosition = () => {
+                let moveX = currentSlide * innerWidth;
+                carouselUl.style.transition = "0s";
+                carouselUl.style.transform = `translateX(-${moveX}px)`;
+                autoPlay(timer);
+                firstSlideInit();
+              };
+
+              /**
+              * 처음 이미지 축소되는 시간은 settimeout 시간 바꾸면 됌
+              */
+              const firstSlideInit = () => {
+                const Slide = document.querySelectorAll(".carosel li div")[1];
+                changeTextAnimation(0);
+                setTimeout(() => {
+                  Slide.classList.remove("widthUp");
+                  // sinceActive(currentSlide, transionTime);
+                }, firstImageScaleDownTiming);
+              };
+
+              const imageScaleDown = (currentSlide) => {
+                setTimeout(() => {
+                  const Slide = document.querySelectorAll(".carosel li div");
+                  Slide[currentSlide].classList.remove("widthUp");
+                }, scaleDownTiming);
+              };
+
+              const imageScaleUp = (currentSlide) => {
+                setTimeout(() => {
+                  const Slide = document.querySelectorAll(".carosel li div");
+                  Slide[currentSlide].classList.add("widthUp");
+                }, scaleUpTiming);
+              };
+
+              const fistSlideDownAni = () => {
+                const Slide = document.querySelectorAll(".carosel li div")[1];
+                setTimeout(() => {
+                  Slide.style.transition = `${transionTime}s`;
+                  Slide.classList.remove("widthUp");
+                }, scaleDownTiming - (scaleUpTiming + transionTime * 1000));
+              };
+
+              const imageSlide = () => {
+                // sinceActive(currentSlide, transionTime);
+                changeTextAnimation(currentSlide);
+                carouselUl.style.transition = `${transionTime}s`;
+                currentSlide++;
+
+                let moveX = currentSlide * innerWidth;
+                carouselUl.style.transform = `translateX(-${moveX}px)`;
+                imageScaleUp(currentSlide);
+                imageScaleDown(currentSlide);
+
+                if (currentSlide === currentItemLength - 1) {
+                  imageScaleUp(currentSlide);
+                  imageScaleUp(1);
+                  clearInterval(timeId);
+
+                  transionTime === 1
+                    ? (setTimeOutTime = 1000 + scaleUpTiming)
+                    : (setTimeOutTime = transionTime * 1000 + scaleUpTiming);
+
+                  setTimeout(() => {
+                    currentSlide = 1;
+                    carouselUl.style.transition = "0s";
+                    moveX = currentSlide * innerWidth;
+                    carouselUl.style.transform = `translateX(-${moveX}px)`;
+                    fistSlideDownAni();
+
+                    setTimeout(() => {
+                      // sinceActive(currentSlide, transionTime);
+                      changeTextAnimation(currentSlide);
+                      currentSlide++;
+                      moveX = currentSlide * innerWidth;
+                      carouselUl.style.transition = `${transionTime}s`;
+                      carouselUl.style.transform = `translateX(-${moveX}px)`;
+                      imageScaleUp(currentSlide);
+                      imageScaleDown(currentSlide);
+                      autoPlay(timer);
+                    }, timer - (transionTime * 1000 + scaleUpTiming));
+                  }, setTimeOutTime);
+                }
+              };
+
+              const autoPlay = (time) => {
+                timeId = setInterval(imageSlide, time);
+              };
+
+              export const initCaroselUl = () => {
+                if(window.innerWidth > 768) {
+                  createCopy();
+                }
+              };
             </code>
           </pre>
         </div>
+        <div class="cl2"></div>
+        <p>다음으론 SVG 코드와 애니메이션 적용이 어려웠던 부분입니다.</p>
+        <p>SVG 코드를 처음 다루는 경험이었기 때문에 디자인 및 SVG 제작에 대해 공부하면서 한계를 느꼈습니다.</p>
+        <p>또한, SVG 코드에 애니메이션을 적용하는 데 Gsap을 사용했는데, 이 부분도 여러 자료를 찾아가며 일일이 구현하기에는 한계가 있었습니다.</p>
 
-        <p><a href="https://preasim.github.io/44" style="text-decoration: underline;" target="_blank">동시성 문제 해결법 (블로그) ></a></p>
-        <div class="cl3"></div>
-        <p>고민 끝에 unique 값인 memberId를 사용해 List에 넣고 그 사이즈를 좋아요 개수로 반환하도록 해결했습니다.</p>
-        <p>이러한 경험을 통해 코드 품질 향상과 효율적인 프로젝트 진행을 위한 노하우를 얻게 되었습니다.</p>
-        <div class="cl3"></div>
-        <p>이러한 어려움에 직면하면서도 팀원들과의 원활한 협업을 통해 공동의 목표를 달성하기 위해 노력했습니다.</p>
-        <p>특히, 플레이리스트 관련 기능에 대한 사용자 피드백을 수렴하고, 이를 바탕으로 지속적인 업데이트 및 개선 작업을 진행하였습니다.</p>
-        <p>사용자들의 다양한 기대에 부응하면서 기능을 확장하고 최적화함으로써 사용자 경험을 꾸준히 향상 시켰습니다.</p>
-        <div class="cl3"></div>
-        <p>앞으로는 이러한 경험을 기반으로 더욱 복잡하고 대규모의 프로젝트에서도 효과적으로</p>
-        <p>리더십을 발휘하고, 기술적인 도전에 더욱 안정적으로 대처해 나가고자 합니다.</p>
-
-        
       </div>
 
       <div id="retrospective">
         <h2 class="title">Retrospective</h2>
-        <p>프로젝트 동안 팀원들과의 원활한 커뮤니케이션은 프로젝트의 핵심이었습니다.</p>
-        <p>API 명세, ERD 등 아키텍처나 트러블 슈팅에 관해 의견을 공유하고 조율하는 과정에서</p>
-        <p>서로의 아이디어와 전문성을 존중하고 융합할 수 있는 능력을 키울 수 있었습니다.</p>
-        <p>특히 정기적인 회의와 업무 분담, 의사 결정 과정에서의 원활한 소통은</p>
-        <p>프로젝트 일정을 효율적으로 관리하고 업무의 효율성을 높이는 데 기여했습니다.</p>
-        <div class="cl3"></div>
-        <p>프로젝트 마무리 단계에서 다른 팀의 서비스를 사용하면서 우리 팀과의 기술적인 차이를 경험했습니다.</p>
-        <p>이미지 업로드 기술, 멤버 페이지 디자인, OAuth 2 로그인 기능 등을 참고하여</p>
-        <p>기술적인 개선점을 도출하여 우리 팀의 프로젝트에 적용할 수 있는 아이디어를 얻을 수 있었습니다.</p>
-        <p>이를 향후 프로젝트에 지속적인 서비스로 적용하고 개선해 나가 보다 나은 결과물을 만들어 나갈 수 있도록 하고 싶습니다.</p>
+
       </div>
     </div>
   </div>
