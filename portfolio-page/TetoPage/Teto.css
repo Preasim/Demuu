@@ -58,14 +58,20 @@
 }
 
 @media (max-width: 992px) {
+  
   .projectName {
     font-size: 5.5em;
+    padding-left: 16px;
   }
   .teamName {
     font-size: 20px;
+    padding-right: 0;
+
   }
   .date {
     font-size: 18px;
+    padding-right: 12px;
+
   }
 
   .sum-img .item {
@@ -75,15 +81,18 @@
 
 @media (max-width: 576px) {
   .projectName {
-    font-size: 5em;
+    font-size: 4.5em;
+    margin-left: 8px;
   }
   .teamName {
     font-size: 17px;
     font-weight: 600;
+    margin-left: 8px;
   }
   .date {
     font-size: 16px;
     font-weight: 600;
+    margin-left: 8px;
   }
 
   .sum-img .item {
@@ -93,7 +102,7 @@
 
 @media (max-width: 440px) {
   .projectName {
-    font-size: 4.2em;
+    font-size: 4em;
   }
   .teamName {
     font-size: 14px;
