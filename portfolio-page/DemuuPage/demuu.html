@@ -350,15 +350,12 @@
                 firstSlideInit();
               };
 
-              /**
-              * 처음 이미지 축소되는 시간은 settimeout 시간 바꾸면 됌
-              */
               const firstSlideInit = () => {
                 const Slide = document.querySelectorAll(".carosel li div")[1];
                 changeTextAnimation(0);
                 setTimeout(() => {
                   Slide.classList.remove("widthUp");
-                  // sinceActive(currentSlide, transionTime);
+                  sinceActive(currentSlide, transionTime);
                 }, firstImageScaleDownTiming);
               };
 
@@ -385,7 +382,7 @@
               };
 
               const imageSlide = () => {
-                // sinceActive(currentSlide, transionTime);
+                sinceActive(currentSlide, transionTime);
                 changeTextAnimation(currentSlide);
                 carouselUl.style.transition = `${transionTime}s`;
                 currentSlide++;
@@ -412,7 +409,7 @@
                     fistSlideDownAni();
 
                     setTimeout(() => {
-                      // sinceActive(currentSlide, transionTime);
+                      sinceActive(currentSlide, transionTime);
                       changeTextAnimation(currentSlide);
                       currentSlide++;
                       moveX = currentSlide * innerWidth;
