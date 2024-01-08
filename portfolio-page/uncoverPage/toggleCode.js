@@ -19,14 +19,18 @@ function toggleCode(data, windowWidth) {
   
     if (!data.isOpen) {
       togglecode.style.width = '95%';
-      togglecode.style.height = data.height;
+      setTimeout(() => {
+        togglecode.style.height = data.height;
+      }, 400);
       tr.style.display = 'none';
       td.style.display = 'inline-block';
       data.isOpen = true;
     } else {
       for (let i = 0; i < widths.length; i++) {
         if (windowWidth > widths[i]) {
-          togglecode.style.width = dimensions[i].width;
+          setTimeout(() => {
+            togglecode.style.width = dimensions[i].width;
+          }, 400)
           togglecode.style.height = dimensions[i].height;
           tr.style.display = 'inline-block';
           td.style.display = 'none';
