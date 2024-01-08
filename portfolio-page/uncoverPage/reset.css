@@ -37,19 +37,6 @@ code {
   font-size: 18px;
 }
 
-summary {
-  font-size: 20px;
-  margin-bottom: 30px;
-  background-color: #000;
-  display: inline-block;
-  color: #fff;
-  border-radius: 12px;
-  padding: 14px;
-}
-summary:hover {
-  cursor: pointer;
-}
-
 #toggle-code {
   width: 154px;
   height: 44px;
@@ -133,6 +120,12 @@ summary:hover {
   transform: translate(-50%, -50%);
 }
 
+.role {
+  font-size: 22px;
+  padding-bottom: 16px;
+  font-weight: 600;
+}
+
 /* ----------------------- architecture ------------------ */
 #architecture {margin-top: 180px;}
 #architecture .title {
@@ -182,6 +175,10 @@ summary:hover {
     font-size: 2.2em;
   }
 
+  .role {
+    font-size: 21px;
+  }
+
   .portfolio p {
     font-size: 17px;
   }
@@ -214,6 +211,10 @@ summary:hover {
   
   .title {
     font-size: 2em;
+  }
+
+  .role {
+    font-size: 20px;
   }
 
   .portfolio p {
@@ -263,6 +264,10 @@ summary:hover {
   
   .title {
     font-size: 1.8em;
+  }
+
+  .role {
+    font-size: 18px;
   }
 
   .portfolio p {
@@ -317,6 +322,10 @@ summary:hover {
     font-size: 1.7em;
   }
 
+  .role {
+    font-size: 16px;
+  }
+
   .portfolio p {
     font-size: 14px;
   }
@@ -351,6 +360,10 @@ summary:hover {
 
   .title {
     font-size: 1.6em;
+  }
+
+  .role {
+    font-size: 14px;
   }
 
   .portfolio p {
