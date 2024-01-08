@@ -31,3 +31,76 @@
   box-shadow: 0 3px 6px rgba(0,0,0,.2), 0 3px 6px rgba(0,0,0,.2);
   margin: 16px;
 }
+
+
+@media (max-width: 1200px) {
+  .projectName {
+    font-size: 6em;
+  }
+  .teamName {
+    font-size: 22px;
+  }
+  .date {
+    font-size: 20px;
+  }
+
+  .sum-img {
+    display: block;
+  }
+  .sum-img .item {
+    margin: 26px auto;
+    width: 70%;
+  }
+
+  #architecture {
+    margin-top: 154px;
+  }
+}
+
+@media (max-width: 992px) {
+  .projectName {
+    font-size: 5.5em;
+  }
+  .teamName {
+    font-size: 20px;
+  }
+  .date {
+    font-size: 18px;
+  }
+
+  .sum-img .item {
+    width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .projectName {
+    font-size: 5em;
+  }
+  .teamName {
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .date {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .sum-img .item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 440px) {
+  .projectName {
+    font-size: 4.2em;
+  }
+  .teamName {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .date {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
