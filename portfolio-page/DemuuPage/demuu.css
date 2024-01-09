@@ -16,21 +16,60 @@
 
 
 @media (max-width: 1400px) {
+  .projectName {
+    font-size: 6.4em;
+  }
+  
+  .date {
+    font-size: 21px;
+  }
   
 }
 
 @media (max-width: 1200px) {
-
+  .projectName {
+    font-size: 6em;
+  }
+  
+  .date {
+    font-size: 19px;
+  }
 }
 
 @media (max-width: 992px) {
-
+  .projectName {
+    font-size: 5.5em;
+  }
+  
+  .date {
+    font-size: 17px;
+  }
 }
 
 @media (max-width: 576px) {
-
+  .projectName {
+    font-size: 4.8em;
+    padding-left: 12px;
+    letter-spacing: 16px;
+  }
+  
+  .date {
+    font-size: 14px;
+    font-weight: 600;
+    padding-right: 0;
+    letter-spacing: 7px;
+  }
 }
 
 @media (max-width: 440px) {
-
+  .projectName {
+    font-size: 4.6em;
+    letter-spacing: 7px;
+    padding-left: 6px;
+  }
+  
+  .date {
+    font-size: 14px;
+    letter-spacing: 5px;
+  }
 }
