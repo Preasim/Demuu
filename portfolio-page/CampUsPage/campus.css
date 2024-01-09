@@ -1,0 +1,114 @@
+.projectName {
+  text-align: center;
+  font-size: 5.7em;
+  font-weight: 600;
+  letter-spacing: 8px;
+  padding-top: 8px;
+}
+.teamName {
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: 22px;
+  padding-top: 4px;
+  padding-left: 18px;
+}
+.date {
+  text-align: center;
+  font-size: 23px;
+  letter-spacing: 10px;
+  padding-top: 180px;
+}
+
+.eximg {
+  text-align: center;
+}
+.eximg img {
+  width: 50%;
+}
+
+@media (max-width: 1400px) {
+  .projectName {
+    font-size: 5.3em;
+  }
+  .teamName {
+    font-size: 23px;
+  }
+  .date {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .projectName {
+    font-size: 5em;
+  }
+  .teamName {
+    font-size: 21px;
+  }
+  .date {
+    font-size: 19px;
+  }
+  .eximg img {
+    width: 65%;
+  }
+}
+
+@media (max-width: 992px) {
+  .projectName {
+    font-size: 4.5em;
+  }
+  .teamName {
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .date {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .eximg img {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .eximg img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .projectName {
+    font-size: 4em;
+  }
+  .teamName {
+    font-size: 14px;
+    letter-spacing: 20px;
+  }
+  .date {
+    font-size: 14px;
+    letter-spacing: 9px;
+  }
+  .eximg img {
+    width: 95%;
+  }
+}
+
+@media (max-width: 440px) {
+  .projectName {
+    font-size: 3.6em;
+  }
+  .teamName {
+    font-size: 14px;
+    letter-spacing: 17px;
+    padding-left: 8px;
+  }
+  .date {
+    font-size: 14px;
+    letter-spacing: 8px;
+  }
+
+  .eximg img {
+    width: 100%;
+  }
+}
