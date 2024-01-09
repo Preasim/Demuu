@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="../../img/favicon.webp">
+  <link rel="stylesheet" href="./campus.css">
+  <link rel="stylesheet" href="../uncoverPage/reset.css">
+  <link rel="stylesheet" href="../../fontawesome/css/all.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai-sublime.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+  <title>Demuu Portfolio</title>
+</head>
+<body>
+
+  <header>
+    <div id="header">
+      <div class="header-container clearfix">
+        <div class="header-logo">
+          <a href="../../main-page/index.html"><img src="../../img/faviconB.webp" alt="logo"/></a>
+        </div>
+        <div class="header-menu">
+          <ul>
+            <li>
+              <a href="../../main-page/index.html">Home</a>
+            </li>
+            <li>
+              <a href="../../portfolio-page/portfolio.html">Portfolio</a>
+            </li>
+            <li>
+              <a href="../../gallery-page/gallery.html">Gallery</a>
+            </li>
+            <li>
+              <a href="https://preasim.github.io">Blog</a>
+            </li>
+          </ul>
+        </div>
+    
+        <!-- ----- header-menu2 (576px or less) ----- -->
+        <div class="header-menu2">
+          <div class="circle"></div>
+          <div class="menu2-menus">
+            <ul>
+              <li><a href="../../main-page/index.html">Home</a></li>
+              <li><a href="../../portfolio-page/portfolio.html">Portfolio</a></li>
+              <li><a href="../../gallery-page/gallery.html">Gallery</a></li>
+              <li><a href="https://preasim.github.io">Blog</a></li>
+            </ul>
+          </div>
+          <div class="burger">
+            <div class="x"></div>
+            <div class="y"></div>
+            <div class="z"></div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  
+  <div class="site">
+    <a href="https://github.com/codestates-seb/seb43_main_017" target="_blank">
+      <div class="item">
+        <img src="../../img/github2.png" style="width: 90%; padding-top: 4px;">
+      </div>
+    </a>
+    <a href="https://fir-comet-0b2.notion.site/Uncover-29b5c60e0d684aca9e669f27ade96777" target="_blank">
+      <div class="item">
+        <img src="../../img/lbj_notion_0.webp" style="width: 76%;">
+      </div>
+    </a>
+  </div>
+
+
+  <div class="break-container">
+    <div class="portfolio">
+      <h2 class="date">2023.04.28 ~ 2023.05.31</h2>
+      <h2 class="projectName">CAMPUS</h2>
+      <h2 class="teamName">Team. CamUs</h2>
+
+      <div id="summary">
+        <h2 class="title">Summary</h2>
+        <div class="summary-site">
+          <a href="https://github.com/codestates-seb/seb43_main_017" target="_blank">
+            <div class="item">
+              <img src="../../img/github2.png" style="width: 86%; padding-top: 2px;">
+            </div>
+          </a>
+          <a href="https://fir-comet-0b2.notion.site/Uncover-29b5c60e0d684aca9e669f27ade96777" target="_blank">
+            <div class="item">
+              <img src="../../img/lbj_notion_0.webp" style="width: 72%;">
+            </div>
+          </a>
+        </div>
+        <h3 class="role">Front-End Lead / FE, BE Development</h3>
+        <p>6인 팀 프로젝트 / No Copyright Music 서비스 플랫폼</p>
+        
+      </div>
+
+      <div id="architecture">
+        <h2 class="title">Architecture</h2>
+        <p><a href="../../img/UncoverERD.webp" target="_blank">ERD 바로가기 <i class="fa-solid fa-chevron-right"></i></a></p>
+        <p><a href="https://documenter.getpostman.com/view/25524075/2s93eX1DP8#de8c1b63-20c9-40cf-ad48-514269974fb3" target="_blank">API 바로가기 <i class="fa-solid fa-chevron-right"></i></a></p>
+
+        <div class="stack">
+          <img src="../../img/Architecture1.webp">
+        </div>
+      </div>
+
+      <div id="experience">
+        <h2 class="title">Experience</h2>
+        <p>이 프로젝트에서 저는 팀 리더로서 기획부터 아키텍처 설계, 가이드 문서 작성, 디자인 아이디어 제시를 주도했습니다.</p>
+        <p>기술적인 측면에서는 주로 플레이리스트와 관련된 부분에 집중했습니다.</p>
+        <p>구체적으로는 플레이리스트, 플레이리스트 댓글, 좋아요 기능, 그리고 태그 및 플레이리스트 태그를 구현하는 등의 작업을 수행했습니다.</p>
+        <div class="cl3"></div>
+        <p>플레이리스트는 멤버, 음악, 태그, 댓글, 좋아요 등 모든 부분과 연결되어 있어 예상보다 복잡한 작업이었습니다.</p>
+        <p>미숙함으로 인해 다른 테이블과의 연관관계 매핑이 어려웠고, 이에 따른 작업이 상당한 시간을 필요로 했습니다.</p>
+
+        <div id="toggle-code" class="toggle-code-1">
+          <div class="toggle-code-btn tcb1">
+            <p>소스코드 보기</p>
+            <i id="toggle-right" class="fa-solid fa-angle-right tr1"></i>
+            <i id="toggle-down" class="fa-solid fa-angle-down td1"></i>
+          </div>
+          <pre>
+            <code class="language-java">
+              @ElementCollection(fetch = FetchType.LAZY)
+              private List&lt;String> tags = new ArrayList<>();
+    
+              @OneToMany(mappedBy = "playList", cascade = {CascadeType.ALL})
+              private List&lt;PlayListTag> playListTags = new ArrayList<>();
+    
+              @OneToMany(mappedBy = "playList", cascade = {CascadeType.ALL})
+              private List&lt;PlayListLike> playListLikes = new ArrayList<>();
+    
+              @OneToMany(mappedBy = "playList", cascade = {CascadeType.ALL})
+              private List&lt;PlayListComment> playListComments = new ArrayList<>();
+    
+              @Column(nullable = false)
+              private int likeCount = this.playListLikes.size();
+    
+              @OneToMany(mappedBy = "playList", cascade = {CascadeType.ALL})
+              private List&lt;PlayListMusic> playlistMusics = new ArrayList<>();
+            </code>
+          </pre>
+        </div>
+        
+      </div>
+
+      <div id="retrospective">
+        <h2 class="title">Retrospective</h2>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="../../common/header.js"></script>
+  <script type="module" src="./campus.js"></script>
+  <script>hljs.highlightAll();</script>
+</body>
+</html>
