@@ -440,11 +440,126 @@
         <p>SVG 코드를 처음 다루는 경험이었기 때문에 디자인 및 SVG 제작에 대해 공부하면서 한계를 느꼈습니다.</p>
         <p>또한, SVG 코드에 애니메이션을 적용하는 데 Gsap을 사용했는데, 이 부분도 여러 자료를 찾아가며 일일이 구현하기에는 한계가 있었습니다.</p>
 
+        <div id="toggle-code" class="toggle-code-4">
+          <div class="toggle-code-btn tcb4">
+            <p>소스코드 보기</p>
+            <i id="toggle-right" class="fa-solid fa-angle-right tr4"></i>
+            <i id="toggle-down" class="fa-solid fa-angle-down td4"></i>
+          </div>
+          <pre>
+            <code class="language-js">
+              export const section3Intro = (() => {
+                let hasRun = true;
+              
+                // section3 position
+                let section3Top = Math.floor
+                  (window.scrollY + document.querySelector("#section3").getBoundingClientRect().top);
+                return (scrollPosition) => {
+                  if (scrollPosition === section3Top && hasRun) {
+                    hasRun = false;
+                    const circle = 
+                      '&lt;svg viewBox="0 0 67.4 67.4">&lt;circle class="circle" cx="33.7" cy="33.7" r="33.7"/>&lt;/svg>';
+              
+                    class Particle{
+                        
+                      constructor(svg, coordinates, friction){
+                        this.svg = svg
+                        this.steps = ($(window).height())/2
+                        this.item = null
+                        this.friction = friction
+                        this.coordinates = coordinates
+                        this.position = this.coordinates.y
+                        this.dimensions = this.render()
+                        this.move()
+                        this.rotation = Math.random() > 0.5 ? "-" : "+"
+                        this.scale = 0.4 + (Math.random()*2)
+                        this.siner = $(window).width()/2.5 * Math.random()
+                      }
+                      destroy(){
+                        this.item.remove()
+                      }
+                      
+                      move(){
+                        this.position = this.position - this.friction
+                        let top = this.position;
+                        let left = this.coordinates.x + Math.sin(this.position*Math.PI/this.steps) * this.siner;
+                        this.item.css({
+                          transform: "translateX("+left+"px) 
+                            translateY("+top+"px) scale(" + this.scale + ") 
+                            rotate("+(this.rotation)+(this.position + this.dimensions.height)+"deg)"
+                        })
+              
+                        if(this.position < -(this.dimensions.height)){
+                          this.destroy()
+                          return false
+                        }else{
+                          return true
+                        }
+                      }
+                      
+                      render(){
+                        this.item = $(this.svg, {
+                          css: {
+                            transform: "translateX("+this.coordinates.x+"px) translateY("+this.coordinates.y+"px)"
+                          }
+                        })
+                        $("#particles").append(this.item)
+                        return {
+                          width: this.item.width(),
+                          height: this.item.height()
+                        }
+                      }
+                    }
+              
+              
+                    let isPaused = false;
+                    window.onblur = function() {
+                        isPaused = true;
+                    }.bind(this)
+                    window.onfocus = function() {
+                        isPaused = false;
+                    }.bind(this)
+              
+                    let particles = [];
+              
+                    setInterval(function(){
+                      if (!isPaused){
+                        particles.push(
+                          new Particle(circle, {
+                          "x": (Math.random() * $(window).width()),
+                          "y": $(window).height() + 100
+                          }, (1 + Math.random()))
+                        )
+                      }
+                    }, 180)
+              
+                    function update(){
+                      particles = particles.filter(function(p){
+                        return p.move()
+                      })
+                      requestAnimationFrame(update.bind(this))
+                    }
+                    update();
+                  }
+                }
+              })();
+            </code>
+          </pre>
+        </div>
+
+        <div class="cl2"></div>
+        <p>그 외에도 어려웠던 부분은 많지만 글이 너무 길어져 다 담지 못할 것 같습니다.</p>
+        <p>앞으로도 계속해서 이 페이지는 유지보수를 통해 저와 연관된 모든 정보가 담긴 통합 웹으로서 기능할 것입니다.</p>
       </div>
 
       <div id="retrospective">
         <h2 class="title">Retrospective</h2>
-
+          <p>이 프로젝트에서는 기술뿐만 아니라, 특히 서버의 랜더링과 트래픽을 낮추고 최적화하는 방법들을 많이 배우게 되었습니다.</p>
+          <p>첨에는 가벼운 마음으로 오래 걸리지 않을 줄 알았던 프로젝트가 시간이 많이 지연돼서 완성되었습니다.</p>
+          <p>인터랙티브 웹을 만들어본 것이 처음이라 성능이 낮은 기기에서 잘 작동되는지를 고려하지 않고 시작한 것이 문제였습니다.</p>
+          <p>만들다 보니 여러 기기에서 테스트를 진행했을 때 문제가 발생하고, 뒤늦게 최적화 작업을 시작했습니다.</p>
+          <p>프로젝트 진행 기간은 계획보다 많이 늦어졌지만, 이 덕분에 최적화의 필요성과 어떤 부분에서 렌더링 지연과 부하가 발생하는지 알게 되었습니다.</p>
+          <p>추후 다른 프로젝트에서는 이 같은 문제가 발생하지 않도록 구상할 때부터 최적화 부분을 고려하여 개발 기간을 단축시킬 수 있도록 노력하려고 합니다.</p>
       </div>
     </div>
   </div>
