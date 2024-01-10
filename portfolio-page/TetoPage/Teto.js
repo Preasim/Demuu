@@ -11,9 +11,3 @@ const toggleData = [
 toggleData.forEach(data => {
   toggleCode(data, windowWidth);
 });
-
-window.addEventListener('resize', function() {
-  toggleData.forEach(data => {
-    toggleCode(data, window.innerWidth);
-  });
-});
