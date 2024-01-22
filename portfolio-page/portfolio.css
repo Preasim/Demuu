@@ -135,7 +135,7 @@ body {
 }
 
 .introduce-txt p {
-  font-size: 16px;
+  font-size: 17px;
   padding: 8px 0;
   transform: rotate(0.02deg);
 }
@@ -781,10 +781,6 @@ footer {
     font-size: 28px;
   }
 
-  .introduce-txt p {
-    font-size: 16px;
-  }
-
   /* ----- section3 ----- */
   .my-skills {
     height: 1480px;
@@ -934,7 +930,7 @@ footer {
   }
 
   .introduce-txt p {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   /* ----- section3 ----- */
