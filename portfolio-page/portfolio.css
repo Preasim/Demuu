@@ -627,7 +627,6 @@ footer {
   height: 18vh;
   color: #fff;
   padding: 2%;
-  display: block;
 }
 
 .send-mail textarea::placeholder {
