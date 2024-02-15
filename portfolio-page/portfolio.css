@@ -796,6 +796,15 @@ footer {
     font-size: 28px;
   }
 
+  .my-explanation {
+    font-size: 18px;
+  }
+
+  .about .am {
+    font-size: 15px;
+    padding: 0 18px;
+  }
+
   /* ----- section3 ----- */
   .my-skills {
     height: 1480px;
@@ -929,6 +938,11 @@ footer {
 
   .my-explanation {
     font-size: 16px;
+  }
+
+  .about .am {
+    font-size: 14px;
+    padding: 0 16px;
   }
 
   /* ----- section2 ----- */
@@ -1070,6 +1084,14 @@ footer {
     padding-bottom: 20px;
   }
 
+  .about {
+    margin-top: 4vh;
+  }
+  
+  .about .am {
+    font-size: 12px;
+    padding: 0 8px;
+  }
 
   /* ----- section2 ----- */
   #portfolio-introduce h1 {
@@ -1195,6 +1217,12 @@ footer {
   .myName {
     font-size: 26px;
   }
+
+  .about .am {
+    display: block;
+    padding: 0 0 20px 0;
+  }
+
 
   /* ----- section2 ----- */
   #portfolio-introduce h1 {
