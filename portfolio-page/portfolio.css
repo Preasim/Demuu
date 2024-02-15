@@ -92,36 +92,13 @@ body {
   font-size: 20px;
 }
 
-.introduce-menu {
-  padding-top: 6vh;
-  font-size: 18px;
-  font-weight: 600;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.introduce-menu .github,
-.introduce-menu .blog {
-  display: inline-block;
-  padding: 0 20px;
-}
-
-.introduce-menu .blog img {
-  width: 20px;
-  vertical-align: middle;
-}
-
-.introduce-menu a:hover {
-  color: #616161;
-}
-
 .about {
   margin-top: 6vh;
   text-align: center;
 }
 
 .about .am {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   display: inline-block;
   padding: 0 20px;
@@ -502,6 +479,42 @@ footer {
   z-index: -1;
 }
 
+/* ----- github, blogbtn ----- */
+.github-btn {
+  cursor: pointer;
+  position: fixed;
+  right: 4vw;
+  bottom: 18vh;
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border: 2px solid #666;
+  border-radius: 6px;
+  transition: all .2s ease;
+}
+
+.github-btn:hover {
+  border-color: #000;
+  transform: scale(1.2, 1.2);
+}
+
+.blog-btn {
+  cursor: pointer;
+  position: fixed;
+  right: 4vw;
+  bottom: 30vh;
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border: 2px solid #666;
+  border-radius: 6px;
+  transition: all .2s ease;
+}
+
+.blog-btn:hover {
+  border-color: #000;
+  transform: scale(1.2, 1.2);
+}
 
 /* ----- send-mail ----- */
 .contact-btn {
@@ -778,15 +791,6 @@ footer {
     font-size: 34px;
   }
 
-  .introduce-menu {
-    font-size: 16px;
-  }
-
-  .introduce-menu .blog img {
-    width: 16px;
-  }
-
-
   /* ----- section2 ----- */
   #portfolio-introduce h1 {
     font-size: 28px;
@@ -925,14 +929,6 @@ footer {
 
   .my-explanation {
     font-size: 16px;
-  }
-
-  .introduce-menu {
-    font-size: 14px;
-  }
-
-  .introduce-menu .blog img {
-    width: 16px;
   }
 
   /* ----- section2 ----- */
