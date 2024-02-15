@@ -479,36 +479,30 @@ footer {
   z-index: -1;
 }
 
-/* ----- github, blogbtn ----- */
-.github-btn {
+/* ----- github, blog, contact btn ----- */
+.fixbtn {
   cursor: pointer;
   position: fixed;
   right: 4vw;
-  bottom: 18vh;
   width: 80px;
   height: 80px;
-  background-color: #fff;
+  background-color: inherit;
   border: 2px solid #666;
   border-radius: 6px;
   transition: all .2s ease;
 }
 
-.github-btn:hover {
+.fixbtn:hover {
   border-color: #000;
   transform: scale(1.2, 1.2);
 }
 
+.github-btn {
+  bottom: 18vh;
+}
+
 .blog-btn {
-  cursor: pointer;
-  position: fixed;
-  right: 4vw;
   bottom: 30vh;
-  width: 80px;
-  height: 80px;
-  background-color: #fff;
-  border: 2px solid #666;
-  border-radius: 6px;
-  transition: all .2s ease;
 }
 
 .blog-btn:hover {
@@ -516,21 +510,11 @@ footer {
   transform: scale(1.2, 1.2);
 }
 
-/* ----- send-mail ----- */
 .contact-btn {
-  cursor: pointer;
-  position: fixed;
-  right: 4vw;
   bottom: 6vh;
-  background-color: #fff;
   color: #666;
-  border: 2px solid #666;
   line-height: normal;
-  border-radius: 6px;
-  transition: all .2s ease;
   overflow: hidden;
-  width: 80px;
-  height: 80px;
   text-align: center;
   z-index: -1;
 }
@@ -773,6 +757,14 @@ footer {
     width: 60vw;
   }
 
+
+  /* ----- github, blog, contact btn ----- */
+  .fixbtn {
+    right: 14px;
+    width: 76px;
+    height: 76px;
+  }
+
   /* ----- send-mail ----- */
   .send-mail {
     width: 75vw;
@@ -858,12 +850,24 @@ footer {
     width: 80vw;
   }
   
+  /* ----- github, blog, contact btn ----- */
+  .fixbtn {
+    right: 10px;
+    width: 75px;
+    height: 75px;
+  }
+
+  .github-btn {
+    bottom: 16vh;
+  }
+  
+  .blog-btn {
+    bottom: 27vh;
+  }
+
   /* ----- send-mail ----- */
   .contact-btn {
-    right: 3vw;
     bottom: 5vh;
-    width: 76px;
-    height: 76px;
   }
 
   .send-mail {
@@ -1041,13 +1045,25 @@ footer {
     font-size: 12px;
   }
 
+  /* ----- github, blog, contact btn ----- */
+  .fixbtn {
+    right: 8px;
+    width: 68px;
+    height: 68px;
+  }
+
+  .github-btn {
+    bottom: 13vh;
+  }
+  
+  .blog-btn {
+    bottom: 23vh;
+  }
+
   /* ----- send-mail ----- */
   .contact-btn {
-    right: 2vw;
     bottom: 3vh;
-    width: 74px;
-    height: 74px;
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .send-mail {
@@ -1172,10 +1188,32 @@ footer {
     width: 150px;
     font-size: 14px;
   }
+
+  /* ----- github, blog, contact btn ----- */
+  .fixbtn {
+    right: 4px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #666;
+    border-radius: 30%;
+  }
+
+  .github-btn {
+    bottom: 10vh;
+  }
+  
+  .blog-btn {
+    bottom: 18vh;
+  }
+
+  .fixbtn:hover {
+    transform: scale(1.1, 1.1);
+  }
   
   /* ----- send-mail ----- */
   .contact-btn {
     bottom: 2vh;
+    font-size: 12px;
   }
 
   .send-mail {
@@ -1334,11 +1372,6 @@ footer {
   }
 
   /* ----- send-mail ----- */
-  .contact-btn {
-    width: 70px;
-    height: 70px;
-    border-radius: 12px;
-  }
 
   .send-mail {
     width: 100vw;
@@ -1400,11 +1433,25 @@ footer {
   .phone-tabs .phone-tab-body>div {
     font-size: 10px;
   }
-  
 
+  /* ----- github, blog, contact btn ----- */
+  .fixbtn {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #666;
+    border-radius: 30%;
+  }
+
+  .github-btn {
+    bottom: 12%;
+  }
+  
+  .blog-btn {
+    bottom: 20%;
+  }
+  
   /* ----- send-mail ----- */
   .contact-btn {
-    right: 6vw;
     bottom: 4vh;
     border: 1px solid #666;
     width: 60px;
