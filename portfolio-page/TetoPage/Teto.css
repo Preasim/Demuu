@@ -27,9 +27,14 @@
 }
 
 .sum-img .item {
+  transition: all .5s;
   padding: 20px;
   box-shadow: 0 3px 6px rgba(0,0,0,.2), 0 3px 6px rgba(0,0,0,.2);
   margin: 16px;
+}
+
+.sum-img .item:hover {
+  transform: scale(1.02);
 }
 
 
