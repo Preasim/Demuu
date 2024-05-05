@@ -130,8 +130,12 @@ body {
 }
 
 /* ----- section3 ----- */
+/* .my-skills { 차트가 있을때
+  height: 1580px; 
+} */
+
 .my-skills {
-  height: 1580px;
+  height: 1080px;
 }
 
 .language-chart {
@@ -170,6 +174,30 @@ body {
   display: inline-block;
   margin: 24px 12px 0 12px;
   overflow: hidden;
+}
+
+.skill-bx .item:hover span {
+  display: block;
+}
+
+.item span {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.item span p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .skill-bx img {
@@ -798,7 +826,7 @@ footer {
 
   /* ----- section3 ----- */
   .my-skills {
-    height: 1480px;
+    height: 1080px;
   }
 
   .language-chart img {
@@ -952,7 +980,7 @@ footer {
 
   /* ----- section3 ----- */
   .my-skills {
-    height: 1440px;
+    height: 1040px;
   }
 
   .language-chart img {
@@ -1115,7 +1143,7 @@ footer {
 
   /* ----- section3 ----- */
   .my-skills {
-    height: 1360px;
+    height: 960px;
   }
 
   .my-skills h2 {
@@ -1126,6 +1154,10 @@ footer {
     width: 66px;
     height: 66px;
     margin: 22px 10px 0 10px;
+  }
+
+  .item span p {
+    font-size: 14px;
   }
 
   /* ----- section4 ----- */
@@ -1265,7 +1297,7 @@ footer {
 
   /* ----- section3 ----- */
   .my-skills {
-    height: 1400px;
+    height: 1180px;
   }
 
   .language-chart img {
@@ -1285,6 +1317,10 @@ footer {
     width: 66px;
     height: 66px;
     margin: 22px 10px 0 10px;
+  }
+
+  .item span p {
+    font-size: 12px;
   }
 
 
@@ -1411,6 +1447,10 @@ footer {
   }
 
   /* ----- section3 ----- */
+  .my-skills {
+    height: 1280px;
+  }
+
   .introduce-txt p {
     font-size: 10px;
   }
