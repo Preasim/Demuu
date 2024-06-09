@@ -249,6 +249,20 @@ body {
   padding-top: 10px;
 }
 
+.ex-carrer {
+  margin-top: 22px;
+}
+
+.ex-carrer h5 {
+  font-weight: 700;
+  padding: 5px 0;
+  font-size: 16px;
+  transform: rotate(0.02deg);
+}
+
+.ex-carrer p {
+  font-size: 14px;
+}
 
 .experience-menu {
   margin-top: 40px;
@@ -304,15 +318,24 @@ body {
 }
 
 .experience-content h5 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
   transform: rotate(0.02deg);
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   padding-top: 10px;
 }
 
+.useStack {
+  font-weight: 500;
+  font-size: 14px;
+  display: block;
+  padding-top: 12px;
+  margin-bottom: 24px;
+  line-height: 20px;
+}
+
 .experience-content p {
-  padding: 10px 0;
+  padding: 8px 0;
 }
 
 .readMe-phone {
@@ -1032,7 +1055,7 @@ footer {
 
   .experience-content h5 {
     font-size: 16px;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
 
   .experience-content p {
@@ -1199,7 +1222,7 @@ footer {
 
   .experience-content h5 {
     font-size: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .experience-content p {
