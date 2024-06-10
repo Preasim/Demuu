@@ -329,7 +329,7 @@ body {
   font-weight: 500;
   font-size: 14px;
   display: block;
-  padding-top: 12px;
+  /* padding-top: 12px; */
   margin-bottom: 24px;
   line-height: 20px;
 }
