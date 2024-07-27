@@ -159,7 +159,7 @@ main {
   opacity: 0.4;
   position: absolute;
   left: 27%;
-  background: #ffab40;
+  background: #f48fb1;
   width: 700px;
   height: 700px;
   margin-left: -250px;
@@ -191,7 +191,7 @@ main {
   top: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, #ee88aa, rgba(221, 238, 255, 0) 80%, rgba(255, 255, 255, 0.5));
+  background: linear-gradient(to bottom, #64b5f6, rgba(221, 238, 255, 0) 80%, rgba(255, 255, 255, 0.5));
   z-index: 11;
   transform: translate3d(0, 0, 0);
 }
@@ -205,8 +205,8 @@ main {
   transform: translate3d(0, 0, 0) translate(0, -30%);
   color: #fff;
   text-transform: uppercase;
-  letter-spacing: 0.4em;
-  font-size: 38px;
+  letter-spacing: 0.2em;
+  font-size: 22px;
   font-weight: 700;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
@@ -215,12 +215,12 @@ main {
   position: absolute;
   width: 100%;
   text-align: center;
-  top: 39%;
+  top: 40%;
   transform: translate(0, -39%);
   color: #fff;
   z-index: 1;
-  letter-spacing: 4px;
-  font-size: 14px;
+  letter-spacing: 3px;
+  font-size: 12px;
 }
 
 @-webkit-keyframes drift {
@@ -666,16 +666,16 @@ main {
     width: 500px;
     height: 500px;
   }
-  .title {
+  /* .title {
     letter-spacing: 0.4em;
     font-size: 28px;
-  }
-  .box p {
+  } */
+  /* .box p {
     top: 40%;
     transform: translate(0, -40%);
     letter-spacing: 2px;
     font-size: 12px;
-  }
+  } */
 
   /* ---------- slide3 ---------- */
   .poster__content {
