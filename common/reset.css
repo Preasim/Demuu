@@ -553,7 +553,7 @@ div.rotate135 {
 
 @media (max-width: 768px) {
   .break-container {
-    width: 540px;
+    width: 97%;
   }
 
   /* ----- header ----- */
@@ -589,7 +589,7 @@ div.rotate135 {
 
 /* ------------------ footer ----------------- */
 .footer-bx {
-  margin-top: 8vh;
+  margin-top: 4vh;
   height: 110px;
   background-color: #222;
 }
@@ -613,6 +613,7 @@ div.rotate135 {
 @media (max-width: 1200px) {
   .footer-bx {
     height: 100px;
+    margin-top: 0;
   }
 }
 
