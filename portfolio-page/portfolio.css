@@ -1261,7 +1261,7 @@ footer {
     text-align: center;
     padding-top: 40px;
   }
-  
+
   .readMe-phone p {
     padding-top: 12px;
     display: inline-block;
@@ -1340,5 +1340,19 @@ footer {
   .skill-bx .item {
     width: 60px;
     height: 60px;
+  }
+}
+
+@media (max-width: 450px) {
+  .my-explanation {
+    font-size: 14px;
+  }
+
+  .about .am {
+    font-size: 12px;
+  }
+
+  .introduce-btn span, .introduce-btn i {
+    font-size: 12px;
   }
 }

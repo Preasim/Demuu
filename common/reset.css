@@ -553,7 +553,7 @@ div.rotate135 {
 
 @media (max-width: 768px) {
   .break-container {
-    width: 97%;
+    width: 95%;
   }
 
   /* ----- header ----- */
@@ -572,9 +572,6 @@ div.rotate135 {
 }
 
 @media (max-width: 576px) {
-  .break-container {
-    width: 100%;
-  }
 
   /* ----- header ----- */
   .header-menu {
