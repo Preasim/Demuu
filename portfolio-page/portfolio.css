@@ -109,6 +109,10 @@ body {
   padding: 0 20px;
 }
 
+.introduce-btn {
+  display: none;
+}
+
 /* ----- section2 ----- */
 #portfolio-introduce {
   position: relative;
@@ -1174,6 +1178,7 @@ footer {
 @media (max-width: 768px) {
 
   .introduce-btn {
+    display: block;
     margin-top: 4vh;
   }
 

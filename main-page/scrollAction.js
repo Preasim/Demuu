@@ -9,6 +9,7 @@ function scroll() {
     section2Animation(scrollPosition);
     section3Intro(scrollPosition);
     tubeIntro(scrollPosition);  
+    console.log(scrollPosition)
   });
 
   window.onload = () => {
