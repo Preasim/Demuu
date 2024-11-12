@@ -1193,6 +1193,10 @@ footer {
     padding-left: 4px;
   }
 
+  .introduce-txt {
+    padding: 20px 14px 0 14px;
+  }
+
   .experience {
     position: relative;
     display: block;
