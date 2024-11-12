@@ -102,7 +102,11 @@ section {display: none;}
     display: inline-block;
   }
   .sentences1 {
-    margin-bottom: 50px;
+    position: absolute;
+  }
+  .sentences2 {
+    position: absolute;
+    top: 450px;
   }
   .stn-after::after {
     content: "";
