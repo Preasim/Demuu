@@ -633,10 +633,10 @@ section {
 .section5-title {
   position: absolute;
   top: 24%;
-  right: 6%;
+  right: 2.5%;
   text-align: center;
   color: #fff;
-  width: 500px;
+  width: 600px;
   /* border: 1px solid #fff; */
 }
 .section5-title h2 {
@@ -645,7 +645,7 @@ section {
 }
 .section5-title h5 {
   font-size: 28px;
-  letter-spacing: 1.8px;
+  letter-spacing: 3px;
   font-weight: 700;
 }
 
@@ -868,7 +868,7 @@ section {
   /* ----- section5 ----- */
   .section5-title {
     top: 30%;
-    width: 360px;
+    width: 420px;
   }
   .section5-title h2 {
     font-size: 100px;

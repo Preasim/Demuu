@@ -24,11 +24,14 @@ function scroll() {
       timer = setTimeout(() => {
         let delta = 0;
 
-        if (!event) event = window.event;
-        if (event.wheelDelta) {
-          delta = event.wheelDelta / 120;
-          if (window.opera) delta = -delta;
-        } else if (event.detail) delta = -event.detail / 3;
+        if (event) { // event가 있다면 바로 사용
+          if (event.wheelDelta) {
+            delta = event.wheelDelta / 120;
+            if (window.opera) delta = -delta;
+          } else if (event.detail) {
+            delta = -event.detail / 3;
+          }
+        }
 
         let moveTop = window.scrollY;
         let currentSectionIndex = -1;
