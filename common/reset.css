@@ -253,7 +253,7 @@ body::-webkit-scrollbar-track {
 }
 
 .header-logo img {
-  width: 44px;
+  width: 50px;
 }
 
 .header-menu {
@@ -519,7 +519,7 @@ div.rotate135 {
 
   /* ----- header ----- */
   .header-logo img {
-    width: 40px;
+    width: 46px;
   }
 
   .header-menu li a {
@@ -539,7 +539,7 @@ div.rotate135 {
   }
 
   .header-logo img {
-    width: 38px;
+    width: 44px;
   }
 
   .header-menu ul {
@@ -562,7 +562,7 @@ div.rotate135 {
   }
 
   .header-logo img {
-    width: 34px;
+    width: 40px;
   }
 
   .header-menu li a {
