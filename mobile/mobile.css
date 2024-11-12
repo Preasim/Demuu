@@ -103,10 +103,11 @@ section {display: none;}
   }
   .sentences1 {
     position: absolute;
+    top: 280px;
   }
   .sentences2 {
     position: absolute;
-    top: 450px;
+    top: 420px;
   }
   .stn-after::after {
     content: "";
