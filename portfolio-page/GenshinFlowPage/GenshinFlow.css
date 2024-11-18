@@ -36,6 +36,13 @@
   transform: scale(1.02);
 }
 
+.dddImg {
+  width: 100%;
+  text-align: center;
+}
+.dddImg img {
+  width: 500px;
+}
 
 @media (max-width: 1200px) {
   .projectName {
