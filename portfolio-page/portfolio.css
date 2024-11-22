@@ -573,10 +573,13 @@ footer {
 .fixbx {
   position: sticky;
   bottom: 8vh;
+  width: 80px; /* fixbtn의 너비와 동일하게 설정 */
+  margin-left: auto; /* 부모의 왼쪽 여백 제거 */
+  right: 3vw; /* 화면 오른쪽에 위치 */
 }
 
 .fixbtn {
-  position: absolute;
+  position: relative; /* 내부 요소는 fixbx 기준으로 배치 */
   cursor: pointer;
   width: 80px;
   height: 80px;
@@ -584,8 +587,6 @@ footer {
   border: 2.5px solid #666;
   border-radius: 6px;
   transition: all .2s ease;
-  margin-left: auto;
-  right: 3vw;
 }
 
 .fixbtn:hover {
@@ -599,7 +600,7 @@ footer {
 }
 
 .github-btn {
-  bottom: 110px;
+  margin-bottom: 25px;
 }
 
 .contact-btn {
