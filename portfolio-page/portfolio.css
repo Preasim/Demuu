@@ -359,6 +359,10 @@ body {
   margin-top: 40px;
 }
 
+.genshinflow-ex-cb {
+  margin-bottom: 50px;
+}
+
 .userStack-bx {
   padding-top: 26px;
   border-top: solid 2px rgba(0, 0, 0, .1);
@@ -573,9 +577,9 @@ footer {
 .fixbx {
   position: sticky;
   bottom: 8vh;
-  width: 80px; /* fixbtn의 너비와 동일하게 설정 */
-  margin-left: auto; /* 부모의 왼쪽 여백 제거 */
-  right: 3vw; /* 화면 오른쪽에 위치 */
+  width: 80px;
+  margin-left: auto;
+  right: 3vw;
 }
 
 .fixbtn {
@@ -918,8 +922,16 @@ footer {
     margin-left: 0;
   }
 
+  .experience-btn-wrap {
+    margin-left: 0;
+  }
+
   .experience-content {
     margin-left: 5%;
+  }
+
+  .genshinflow-ex-cb {
+    margin-bottom: 0;
   }
 
   .readMe {
@@ -939,19 +951,18 @@ footer {
   }
   
   /* ----- github, blog, contact btn ----- */
+  .fixbx {
+    right: 1vw;
+  }
+
   .fixbtn {
     margin-top: 20px;
     width: 75px;
     height: 75px;
-    right: 10px;
-  }
-
-  .github-btn {
-    bottom: 100px;
   }
 
   .contact-btn {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   /* ----- send-mail ----- */
@@ -1103,6 +1114,14 @@ footer {
     width: 16px;
   }
 
+  .experience-btn a {
+    font-size: 14px;
+  }
+
+  .experience-btn img {
+    width: 16px;
+  }
+
   .readMe {
     width: 110px;
     height: 38px;
@@ -1130,6 +1149,10 @@ footer {
     font-size: 12px;
   }
 
+  .useStack span:first-child {
+    display: none;
+  }
+
   /* ----- section5 ----- */
   .oex-title {
     font-size: 20px;
@@ -1153,13 +1176,14 @@ footer {
   }
 
   /* ----- github, blog, contact btn ----- */
-  .fixbtn {
-    width: 68px;
-    height: 68px;
+  .fixbx {
+    right: 1vw;
   }
 
-  .github-btn {
-    bottom: 90px;
+  .fixbtn {
+    margin-top: 20px;
+    width: 68px;
+    height: 68px;
   }
 
   .fixbtn:hover {
@@ -1266,6 +1290,10 @@ footer {
     width: 18px;
   }
 
+  .experience-btn {
+    display: none
+  }
+
   .experience-content {
     width: 100%;
     margin: 0;
@@ -1277,6 +1305,10 @@ footer {
     border-top: solid 2px rgba(0, 0, 0, .1);
     border-bottom: solid 2px rgba(0, 0, 0, .1);
     padding-bottom: 30px;
+  }
+
+  .userStack-bx {
+    border-top: none;
   }
 
   .experience-content h5 {
@@ -1353,10 +1385,6 @@ footer {
 
   .useStack {
     font-size: 12px;
-  }
-
-  .useStack span:first-child {
-    display: none;
   }
 
   .readMe-phone, .readMe-phone i {
