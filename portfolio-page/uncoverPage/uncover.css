@@ -36,6 +36,14 @@
   transform: scale(1.02);
 }
 
+.dddImg {
+  text-align: center;
+}
+
+.dddImg img {
+  width: 800px;
+}
+
 @media (max-width: 1400px) {
   .projectName {
     font-size: 5.2em;

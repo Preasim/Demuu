@@ -121,8 +121,8 @@
         <p>저작권이 자유로는 음악들을 서비스하는 웹사이트입니다.</p>
         <p>평소 EDM 음악을 즐겨 듣는 저의 취미에서 착안하여, 인터랙티브 웹을 강조한 기획을 진행했습니다.</p>
         <div class="cl3"></div>
-        <p>Java와 Spring Boot를 활용한 첫 팀 프로젝트로 팀원들과 함께 처음 시도하는 프로젝트였기에 서로 질의응답하며 고민하는 과정이 흥미로웠고,</p>
-        <p>커뮤니케이션 능력 향상과 함께 Java, Spring Boot에 대한 익숙함도 함께 얻을 수 있었습니다.</p>
+        <p>Java와 Spring Boot를 활용한 첫 팀 프로젝트로 팀원들과 함께 처음 시도하는 프로젝트였기에 서로 질의응답하며</p>
+        <p>고민하는 과정이 흥미로웠고, 커뮤니케이션 능력 향상과 함께 Java, Spring Boot에 대한 익숙함도 함께 얻을 수 있었습니다.</p>
 
         <div class="cl3"></div>
         <div class="sum-img">
@@ -172,7 +172,6 @@
         <h3 class="role">Backend Development</h3>
         <p>- 플레이리스트, 좋아요, 댓글, 태그 기능 개발</p>
         <p>- 좋아요 및 댓글 기능에서 발생할 수 있는 동시성 문제 해결</p>
-        <p>- 좋아요와 태그를 통한 노래 및 플레이리스트 추천 알고리즘 개발</p>
         <p>- ngrok을 활용한 클라이언트와의 실시간 테스트 진행</p>
         <p>- 인기 있는 노래를 기반으로 한 플레이리스트 추천 기능 개발</p>
         <p>- 유저 선호 태그가 포함된 플레이리스트를 상단에 노출시키는 기능 개발</p>
@@ -189,7 +188,7 @@
 
       <div id="architecture">
         <h2 class="title">Architecture</h2>
-        <p><a href="../../img/UncoverERD.webp" target="_blank">ERD 바로가기 <i class="fa-solid fa-chevron-right"></i></a></p>
+        <p><a href="../../img/uncover_erd.png" target="_blank">ERD 바로가기 <i class="fa-solid fa-chevron-right"></i></a></p>
         <p><a href="https://documenter.getpostman.com/view/25524075/2s93eX1DP8#de8c1b63-20c9-40cf-ad48-514269974fb3" target="_blank">API 바로가기 <i class="fa-solid fa-chevron-right"></i></a></p>
 
         <div class="stack">
@@ -199,151 +198,45 @@
 
       <div id="experience">
         <h2 class="title">Experience</h2>
-        <p>이 프로젝트에서 저는 팀 리더로서 기획부터 아키텍처 설계, 가이드 문서 작성, 디자인 아이디어 제시를 주도했습니다.</p>
-        <p>기술적인 측면에서는 주로 플레이리스트와 관련된 부분에 집중했습니다.</p>
-        <p>구체적으로는 플레이리스트, 플레이리스트 댓글, 좋아요 기능, 그리고 태그 및 플레이리스트 태그를 구현하는 등의 작업을 수행했습니다.</p>
+        <p>이 프로젝트에서는 그동안 학습했던 ERD 설계를 실습해 볼 수 있었습니다.</p>
+        <p>저를 포함한 3명의 백엔드 개발자와 네이버 클라우드 멘토 개발자의 도움을 받아</p>
+        <p>먼저 사용자, 음악, 플레이리스트, 태그, 좋아요 와 같은 주요 엔티티와 그 관계를 정의하며,</p>
+        <p>서비스에서 요구되는 데이터 흐름과 비즈니스 로직을 중심으로 논의를 진행했습니다.</p>
         <div class="cl3"></div>
-        <p>플레이리스트는 멤버, 음악, 태그, 댓글, 좋아요 등 모든 부분과 연결되어 있어 예상보다 복잡한 작업이었습니다.</p>
-        <p>미숙함으로 인해 다른 테이블과의 연관관계 매핑이 어려웠고, 이에 따른 작업이 상당한 시간을 필요로 했습니다.</p>
+        <p>특히, 음악, 플레이리스트, 태그 간의 다대다 관계를 설계하는 과정에서 많은 고민이 있었습니다.</p>
+        <p>초기에는 다대다 구조를 유지한 상태로 테스트를 진행했으나, 중복 데이터 생성과</p>
+        <p>관련 데이터의 반복적인 조회로 인해 성능이 크게 저하되는 문제가 발생했습니다.</p>
         <div class="cl3"></div>
-        <p>초기에는 태그 테이블이 모든 테이블에 연결되어 있는 다대다 구조였습니다.</p>
-        <p>구현 단계에서 데이터 중복, 쿼리의 복잡성 등의 문제가 발생했고,</p>
-        <p>하이버네이트에 의해 생성된 중간 테이블은 비즈니스 로직상 필요한 정보들이 담기지 않았습니다.</p>
-        <p>이에 따라 ERD를 수정하여 뮤직 태그와 플레이리스트 태그 테이블을 따로 만들고 일대다 관계로 변경하였습니다.</p>
+        <p>이를 해결하기 위해 멘토의 피드백을 반영하여,</p>
+        <p>다대다 관계를 musicTag와 playListTag라는 중간 테이블로 분리해 일대다 관계로 재구성하고,</p>
+        <p>조인 테이블에 인덱스를 추가하여 조회 성능을 최적화했습니다.</p>
+        <div class="cl3"></div>
+        <p>그 결과, 데이터베이스 조회 시간이 O(n)에서 O(log n) 수준으로 개선되었고,</p>
+        <p>소규모 데이터 환경에서 약 27%의 성능 향상을 달성할 수 있었습니다.</p>
+        <div class="cl3"></div>
+        <div class="dddImg">
+          <img src="../../img/uncover_erd.png" alt="">
+        </div>
+        <div class="cl1"></div>
+
+        <p>프로젝트 테스트 과정에서, 동시에 여러 사용자가 좋아요 기능을 사용할 때 좋아요 수가 1만 증가하는 동시성 문제가 발생했습니다.</p>
+        <div class="cl3"></div>
+        <p>처음에는 간단히 Lock을 사용하는 방법을 고려했으나, 다중 요청이 동시에 몰리는 경우</p>
+        <p>대기 시간이 길어지고 경합 조건이나 데드락 발생 가능성이 있어 적합하지 않다고 판단했습니다.</p>
+        <div class="cl3"></div>
+        <p>이후 병렬 스트림을 활용하는 방안을 검토했지만, 병렬 처리 중 데이터의 순서가 유지되지 않는 문제와</p>
+        <p>동시화 및 병렬화로 인한 추가적인 오버헤드가 발생할 가능성이 있었습니다.</p>
+        <div class="cl3"></div>
+        <p>이를 해결하기 위해 고유한 값인 memberId를 활용하여 List에 저장하고,</p>
+        <p>해당 List의 크기를 좋아요 개수로 반환하는 방식으로 문제를 해결했습니다.</p>
+        <div class="cl3"></div>
+        <p>이 방식은 관리자가 작업하기 용이하며, 향후 시스템 버전과의 호환성을 유지할 가능성도 높아 실용적이라고 판단했습니다.</p>
 
         <div id="toggle-code" class="toggle-code-1">
           <div class="toggle-code-btn tcb1">
             <p>소스코드 보기</p>
             <i id="toggle-right" class="fa-solid fa-angle-right tr1"></i>
             <i id="toggle-down" class="fa-solid fa-angle-down td1"></i>
-          </div>
-          <pre>
-            <code class="language-java">
-              @ElementCollection(fetch = FetchType.LAZY)
-              private List&lt;String> tags = new ArrayList<>();
-    
-              @OneToMany(mappedBy = "playList", cascade = {CascadeType.ALL})
-              private List&lt;PlayListTag> playListTags = new ArrayList<>();
-    
-              @OneToMany(mappedBy = "playList", cascade = {CascadeType.ALL})
-              private List&lt;PlayListLike> playListLikes = new ArrayList<>();
-    
-              @OneToMany(mappedBy = "playList", cascade = {CascadeType.ALL})
-              private List&lt;PlayListComment> playListComments = new ArrayList<>();
-    
-              @Column(nullable = false)
-              private int likeCount = this.playListLikes.size();
-    
-              @OneToMany(mappedBy = "playList", cascade = {CascadeType.ALL})
-              private List&lt;PlayListMusic> playlistMusics = new ArrayList<>();
-            </code>
-          </pre>
-        </div>
-        
-        <div class="cl2"></div>
-        <p>또한 프로젝트가 진행되면서, 사용자의 역할(role)에 따른 권한 설정에 대한 이슈도 함께 다뤘습니다.</p>
-        <p>이는 관리자와 사용자 간의 권한을 나누어 각각 다른 기능을 제공하도록 하였습니다.</p>
-        <p>이 부분은 프로젝트 시작 전부터 공부하고 싶었던 주제였으며,</p>
-        <p>실제로 구현해보니 이론에서 얻지 못했던 깊은 이해와 새로운 인사이트를 얻을 수 있었습니다.</p>
-        <div class="cl3"></div>
-        <p>관리자 계정은 노래(신곡) 추가, 추천 플레이리스트 생성 외에도 댓글 관리, 프로필 사진 관리, 플레이리스트 사진 관리, 계정 정지 등</p>
-        <p>role 시스템을 도입하여 부적절한 요소를 제거하고 페이지를 관리하도록 하여 쾌적한 유저 환경을 조성하고자 했습니다.</p>
-
-        <div id="toggle-code" class="toggle-code-2">
-          <div class="toggle-code-btn tcb2">
-            <p>소스코드 보기</p>
-            <i id="toggle-right" class="fa-solid fa-angle-right tr2"></i>
-            <i id="toggle-down" class="fa-solid fa-angle-down td2"></i>
-          </div>
-          <pre>
-            <code class="language-java">
-              public Member createMember(Member member) {
-                  verifyExistEmail(member.getEmail());
-                  member.setName(verifyExistName(member.getName()));
-          
-                  // (3) 추가: Password 암호화
-                  String encryptedPassword = passwordEncoder.encode(member.getPassword());
-                  member.setPassword(encryptedPassword);
-          
-                  // (4) 추가: DB에 User Role 저장
-                  List&lt;String> roles = authorityUtils.createRoles(member.getEmail());
-                  member.setRoles(roles);
-          
-                  Member savedMember = memberRepository.save(member);
-          
-                  return savedMember;
-              }
-
-              public Member createMemberOAuth2(Member member) {
-                  List&lt;String> roles = authorityUtils.createRoles(member.getEmail());
-                  member.setRoles(roles);
-                  String newName = verifyExistName(member.getName());
-                  member.setName(newName);
-          
-                  return memberRepository.save(member);
-              }
-
-              public void deletePlayList(long playListId, long memberId){
-                  PlayList playList = findVerifiedPlayList(playListId);
-                  Member member = memberService.findMember(memberId);
-          
-                  if (!member.getRoles().contains("ADMIN")) {
-                      if (!member.getMemberId().equals(playList.getMember().getMemberId())){
-                          throw new BusinessLogicException(ExceptionCode.NO_PERMISSION_DELETING_POST);
-                      }
-                  }
-                  member.removePlayList(playList);
-                  playListRepository.delete(playList);
-              }
-
-              public PlayListComment updateComment(long memberId, long commentId, String content){
-                  PlayListComment comment = getComment(commentId);
-                  Member member = memberService.findMember(memberId);
-          
-                  if (!member.getRoles().contains("ADMIN")) {
-                      if (!member.getMemberId().equals(comment.getMember().getMemberId())){
-                          throw new BusinessLogicException(ExceptionCode.NO_PERMISSION_DELETING_POST);
-                      }
-                  }
-          
-                  comment.setContent(content);
-                  return commentRepository.save(comment);
-              }
-
-              public void deleteComment(long memberId, long commentId){
-                  PlayListComment comment = getComment(commentId);
-                  Member member = memberService.findMember(memberId);
-          
-                  if (!member.getRoles().contains("ADMIN")) {
-                      if (!member.getMemberId().equals(comment.getMember().getMemberId())){
-                          throw new BusinessLogicException(ExceptionCode.NO_PERMISSION_DELETING_POST);
-                      }
-                  }
-                  commentRepository.delete(comment);
-              }
-            </code>
-          </pre>
-        </div>
-
-        <div class="cl2"></div>
-        <p>마지막으로 프로젝트 중에 발생한 동시성 문제에 대한 해결책 모색과 코드 리팩토링을 통해 성능 개선을 이루어냈습니다.</p>
-        <p>동시에 여러 사용자가 좋아요 기능을 사용할 때, 좋아요 수는 1만 증가하는 이 동시성 문제는 이번 프로젝트 중 가장 깊게 고민한 문제입니다.</p>
-        <div class="cl3"></div>
-        <p>처음에는 간단한 Lock 사용을 고려했지만, 여러 곳에서 동시에 요청이 몰리면</p>
-        <p>대기 시간이 길어져 경합 조건이나 데드락 등의 문제를 야기할 수 있다고 판단했습니다.</p>
-        <div class="cl3"></div>
-        <p>다음으로 병렬 스트림을 고려했으나, 연산을 병렬로 처리함으로써 원본 데이터의 순서가 유지되지 않으며,</p>
-        <p>동기화와 병렬화 오버헤드가 발생할 수 있었습니다.</p>
-        <div class="cl3"></div>
-        <p>고민 끝에 관리자가 작업하기 편리하고 새로운 버전과의 호환성을 유지할 가능성이 높도록</p>
-        <p>unique 값인 memberId를 사용해 List에 넣고 그 사이즈를 좋아요 개수로 반환하도록 해결했습니다.</p>
-        <p>이러한 경험을 통해 코드 품질 향상과 효율적인 프로젝트 진행을 위한 노하우를 얻게 되었습니다.</p>
-
-        <div id="toggle-code" class="toggle-code-3">
-          <div class="toggle-code-btn tcb3">
-            <p>소스코드 보기</p>
-            <i id="toggle-right" class="fa-solid fa-angle-right tr3"></i>
-            <i id="toggle-down" class="fa-solid fa-angle-down td3"></i>
           </div>
           <pre>
             <code class="language-java">
@@ -399,16 +292,17 @@
           </pre>
         </div>
 
-        <p><a href="https://preasim.github.io/44" style="text-decoration: underline;" target="_blank">동시성 문제 해결법 (블로그) ></a></p>
-
         <div class="cl2"></div>
-        <p>이러한 어려움에 직면하면서도 팀원들과의 원활한 협업을 통해 공동의 목표를 달성하기 위해 노력했습니다.</p>
-        <p>사용자 피드백을 수렴하고, 이를 바탕으로 지속적인 업데이트 및 개선 작업을 진행하였습니다.</p>
-        <p>노래를 좋아요 순으로 정렬하고 추천 리스트에 표시하는 기능을 업데이트하였으며,</p>
-        <p>사용자가 많이 들은 노래의 태그에 해당하는 노래별로 카운트하여 비슷한 노래들을 추천하는 알고리즘도 개발 중에 있습니다.</p>
+        <p>이전 협업에서 팀원들이 적극적으로 참여하거나 아이디어를 제시하지 않는 상황을 경험한 적이 있습니다.</p>
         <div class="cl3"></div>
-        <p>앞으로는 이러한 경험을 기반으로 더욱 복잡하고 대규모의 프로젝트에서도 효과적으로</p>
-        <p>리더십을 발휘하고, 기술적인 도전에 더욱 안정적으로 대처해 나가고자 합니다.</p>
+        <p>이러한 경험을 바탕으로 이번 프로젝트에서는 팀 리더로서 기획, 아키텍처 설계, 디자인, 개발 등</p>
+        <p>전반적인 과정에 적극적으로 참여하며, 팀원들이 능동적으로 협업에 참여할 수 있는 환경을 조성하는 데 주력했습니다.</p>
+        <div class="cl3"></div>
+        <p>특히 팀원들과의 커뮤니케이션을 강조하며, 자유롭게 의견을 공유할 수 있는 분위기를 형성하고자 노력했습니다.</p>
+        <p>API 명세, ERD 설계, 트러블슈팅 등 기술적인 논의 과정에서는 각자의 아이디어와 전문성을 존중하며 이를 조율해 나갔습니다.</p>
+        <div class="cl3"></div>
+        <p>정기적인 회의, 명확한 업무 분담, 효과적인 의사결정을 통해 팀원들과 원활하게 소통했으며,</p>
+        <p>이러한 협업은 프로젝트 일정 관리와 업무 효율성 향상에 크게 기여했습니다.</p>
         <div class="cl1"></div>
       </div>
     </div>
