@@ -41,7 +41,7 @@
   text-align: center;
 }
 .dddImg img {
-  width: 500px;
+  width: 40%;
 }
 
 @media (max-width: 1200px) {
@@ -88,6 +88,10 @@
   .sum-img .item {
     width: 90%;
   }
+
+  .dddImg img {
+    width: 60%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -99,6 +103,7 @@
     font-size: 17px;
     font-weight: 600;
     margin-left: 8px;
+    letter-spacing: 4px;
   }
   .date {
     font-size: 16px;
@@ -108,6 +113,10 @@
 
   .sum-img .item {
     width: 100%;
+  }
+
+  .dddImg img {
+    width: 80%;
   }
 }
 
@@ -122,5 +131,9 @@
   .date {
     font-size: 14px;
     font-weight: 600;
+  }
+
+  .dddImg img {
+    width: 90%;
   }
 }

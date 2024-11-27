@@ -41,7 +41,7 @@
 }
 
 .dddImg img {
-  width: 800px;
+  width: 70%;
 }
 
 @media (max-width: 1400px) {
@@ -78,6 +78,10 @@
     margin: 26px auto;
     width: 80%;
   }
+
+  .dddImg img {
+    width: 80%;
+  }
 }
 
 @media (max-width: 992px) {
@@ -95,6 +99,10 @@
   }
 
   .sum-img .item {
+    width: 90%;
+  }
+
+  .dddImg img {
     width: 90%;
   }
 }
@@ -115,6 +123,10 @@
   }
 
   .sum-img .item {
+    width: 100%;
+  }
+
+  .dddImg img {
     width: 100%;
   }
 }
