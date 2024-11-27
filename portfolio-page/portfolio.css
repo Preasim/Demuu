@@ -1307,6 +1307,10 @@ footer {
     border-top: none;
   }
 
+  .useStack span:first-child {
+    display: block;
+  }
+
   .experience-content h5 {
     padding-top: 35px;
     font-size: 18px;
